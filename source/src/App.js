@@ -16,9 +16,10 @@ import Projects from './sections/Projects';
 
 const useStyles = makeStyles((theme) => ({
     prjcard: {
-      minHeight: 275,
-      maxHeight: 275,
-      verticalAlign: 'top',
+      minHeight: 250,
+      maxHeight: 250,
+      minWidth: 300,
+      maxWidth: 300,
     },
     badge: {
       backgroundColor: "#FFD700",
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 'bold',
     },
     badgeMargin: {
-      margin: theme.spacing.unit * 2,
+      margin: theme.spacing.unit * 5,
     },
   
     card: {

@@ -29,6 +29,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 // Images
+import gro from '../assets/img/gro.png';
 import hermes from '../assets/img/hermes.png';
 import journey from '../assets/img/journey.png';
 
@@ -61,15 +62,15 @@ function ProjectCard(props) {
   
     var _awardVisible = false;
   
-    if (props.prj.award!="") {
+    if (props.prj.award.search("Winner")!==-1) {
       _awardVisible = true;
     }
   
     return (
       <div>
         <Badge className={classes.badgeMargin} classes={{ badge: classes.badge}} badgeContent={"Winner"} invisible={!_awardVisible} style={{color: 'yellow', background: 'white'}}>
-          <Card className={classes.prjcard} onClick={handleClickOpen} align="center">
-            <CardActionArea className={classes.prjcard} onClick={handleClickOpen} align="center">
+          <Card className={classes.prjcard} onClick={handleClickOpen}>
+            <CardActionArea className={classes.prjcard} onClick={handleClickOpen}>
                 <CardMedia
                   className={classes.media}
                   image={props.prj.image}
@@ -86,17 +87,17 @@ function ProjectCard(props) {
             </CardActionArea>
           </Card>
           <Dialog
-            maxWidth="sm"
+            maxWidth="xs"
             open={open}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
           >
-            <DialogTitle id="alert-dialog-title">
+            {/* <DialogTitle id="alert-dialog-title">
               <IconButton onClick={handleClose} color="black">
                 <CloseIcon/> 
               </IconButton>   
-            </DialogTitle>
+            </DialogTitle> */}
             <DialogContent alignItems="center" justify="center" align="center"> 
               <DialogContentText id="alert-dialog-description">
                 <img className={classes.media}src={props.prj.image}/>
@@ -115,6 +116,9 @@ function ProjectCard(props) {
             </DialogContent>
             <DialogActions justify="center" alignItems="center">
               <div style={{flex: '1 0 0'}} />
+              <Button onClick={handleClose}color="primary">
+                Close 
+              </Button>  
               <Button href={props.prj.link} target="_blank" color="primary" justify="center" align="center">
                 {props.prj.type}
               </Button>
@@ -133,7 +137,7 @@ function Projects(props) {
     const projectList = {
       Hermes : new Project(
         "Hermes",
-        "",
+        "Google Solution Challenge 2021",
         "Hermes is an application that connects students in need of resources to donors willing to provide those resources", 
         "I worked in a team of four to design this for the Google DSC Solution Challenge 2021. We primarily used Flutter to design the front-end, and Firebase to do the back-end. I specifically worked on the visual aspects of the home view and profile view.", 
         hermes,
@@ -147,12 +151,21 @@ function Projects(props) {
         journey,
         "View GitHub",
         "https://github.com/Brenden-Smith/Journey",
+      ),
+      Gro : new Project(
+        "Gro",
+        "BeachHacks 2021",
+        "Gro is an application designed to help users care for their plants by providing them with reminders and a journal for each plant",
+        "I built the back-end aspects of this application, such as user authentication and cloud storage, using Firebase. I also implemented the trefle.io API to use as the plant database, and I worked on various front-end aspects with Flutter.",
+        gro,
+        "View GitHub",
+        "https://github.com/Brenden-Smith/Gro",
       )
     }
   
     return (
-      <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh'}}>
-        <Grid container direction="column" align="center" alignItems="center" justify="space-between" style={{ minHeight: '100vh' }}>
+      <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh', display: 'flex', flex: 1}}>
+        <Grid container direction="column" align="center" alignItems="center" justify="space-between" style={{ minHeight: '100vh', display: 'flex', flex: 1}}>
           <Grid item xs={2} sm={0}>
             <Hidden smUp>
               <Link to="home" smooth={true}>
@@ -165,15 +178,18 @@ function Projects(props) {
               </Link>
             </Hidden>
           </Grid>
-          <Grid item xs={12} sm={12}>
-            <Grid container direction="column" align="center" alignItems="center" justify="center">
+          <Grid item xs={12} sm={12} align="center" alignItems="center" justify="space-between">
+            <Grid container direction="column" align="center" alignItems="center" justify="space-between">
               <Grid item xs={10}>
-                <Grid container xs={12} spacing={3}>
-                  <Grid item xs={6}>
+                <Grid container xs={12} spacing={10} align="center" alignItems="center" justify="space-between" style={{ display: 'flex', flex: 1}}>
+                  <Grid item xs={4}>
                     <ProjectCard prj={projectList.Hermes} style={classes}/>
                   </Grid>
-                  <Grid item xs={6}>
+                  <Grid item xs={4}>
                     <ProjectCard prj={projectList.Journey} style={classes}/>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <ProjectCard prj={projectList.Gro} style={classes}/>
                   </Grid>
                 </Grid>
               </Grid>
