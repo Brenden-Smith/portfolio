@@ -163,13 +163,13 @@ function Projects(props) {
     }
   
     return (
-      <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh', display: 'flex', flex: 1}}>
-        <Grid container direction="column" align="center" alignItems="center" justify="space-between" style={{ minHeight: '100vh', display: 'flex', flex: 1}}>
+      <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh'}}>
+        <Grid container direction="column" align="center" alignItems="center" justify="space-between" style={{ minHeight: '100vh'}}>
           <Grid item xs={2}/>
           <Grid item xs={12} sm={12} align="center" alignItems="center" justify="space-between">
             <Grid container direction="column" align="center" alignItems="center" justify="space-between">
               <Grid item xs={10}>
-                <Grid container xs={12} spacing={0} align="center" alignItems="center" justify="space-between" style={{ display: 'flex', flex: 1}}>
+                <Grid container xs={12} spacing={0} align="center" alignItems="center" justify="space-between">
                   <Grid item sm={12} md={6} lg={4}>
                     <ProjectCard prj={projectList.Hermes} style={classes}/>
                   </Grid>
