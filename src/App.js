@@ -16,10 +16,8 @@ import Projects from './sections/Projects';
 
 const useStyles = makeStyles((theme) => ({
     prjcard: {
-      minHeight: 250,
-      maxHeight: 250,
-      minWidth: 300,
-      maxWidth: 300,
+      width: '100%',
+      height: '100%',
     },
     badge: {
       backgroundColor: "#FFD700",
@@ -36,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
       height: 140,
+      width: '100%',
     },
     sticky: {
       position: "sticky",

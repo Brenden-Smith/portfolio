@@ -5,6 +5,7 @@ import 'fontsource-roboto';
 import '../App.css';
 
 // Components
+import Avatar from '@material-ui/core/Avatar';
 import Badge from '@material-ui/core/Badge';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -100,17 +101,15 @@ function ProjectCard(props) {
             </DialogTitle> */}
             <DialogContent alignItems="center" justify="center" align="center"> 
               <DialogContentText id="alert-dialog-description">
-                <img className={classes.media}src={props.prj.image}/>
-                <div/><p> </p>
+                <Avatar src={props.prj.image}/>
+                <p/>
                 <Typography variant="h5" style={{ color: 'black' }}>{props.prj.title}</Typography>
-                <Badge className={classes.badgeMargin} classes={{ badge: classes.badge}} badgeContent={"Winner"} invisible={!_awardVisible} style={{color: 'yellow', background: 'white'}}/>
+                <p/>
                 <Collapse in={_awardVisible}>
-                  <div/><p> </p>
-                    <p style={{color: 'black'}}>{props.prj.award}</p>
-                  <div/><p> </p>
+                  <Badge classes={{ badge: classes.badge}} badgeContent={"Winner"} invisible={!_awardVisible} style={{color: 'yellow', background: 'white'}}/>
+                  <p style={{color: 'black'}}>{props.prj.award}</p>
                 </Collapse>
                 {props.prj.excerpt}.
-                <div/><p> </p>
                 {props.prj.description}
               </DialogContentText>
             </DialogContent>
@@ -166,29 +165,18 @@ function Projects(props) {
     return (
       <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh', display: 'flex', flex: 1}}>
         <Grid container direction="column" align="center" alignItems="center" justify="space-between" style={{ minHeight: '100vh', display: 'flex', flex: 1}}>
-          <Grid item xs={2} sm={0}>
-            <Hidden smUp>
-              <Link to="home" smooth={true}>
-                <Button style={{ backgroundColor: 'transparent' }}>
-                  <Grid container direction="column">
-                    <Grid item><ExpandLessIcon/></Grid>
-                    <Grid item>About</Grid>
-                  </Grid>
-                </Button>
-              </Link>
-            </Hidden>
-          </Grid>
+          <Grid item xs={2}/>
           <Grid item xs={12} sm={12} align="center" alignItems="center" justify="space-between">
             <Grid container direction="column" align="center" alignItems="center" justify="space-between">
               <Grid item xs={10}>
-                <Grid container xs={12} spacing={10} align="center" alignItems="center" justify="space-between" style={{ display: 'flex', flex: 1}}>
-                  <Grid item xs={4}>
+                <Grid container xs={12} spacing={0} align="center" alignItems="center" justify="space-between" style={{ display: 'flex', flex: 1}}>
+                  <Grid item sm={12} md={6} lg={4}>
                     <ProjectCard prj={projectList.Hermes} style={classes}/>
                   </Grid>
-                  <Grid item xs={4}>
+                  <Grid item sm={12} md={6} lg={4}>
                     <ProjectCard prj={projectList.Journey} style={classes}/>
                   </Grid>
-                  <Grid item xs={4}>
+                  <Grid item sm={12} md={6} lg={4}>
                     <ProjectCard prj={projectList.Gro} style={classes}/>
                   </Grid>
                 </Grid>
@@ -198,7 +186,7 @@ function Projects(props) {
           <Grid item xs={12} sm={0}>
             <div>
               <Hidden smUp>
-                <Typography variant="caption">Created with React and MaterialUI by Brenden Smith</Typography>
+                <Typography variant="caption">Created with React and MaterialUI</Typography>
               </Hidden>
               <Box pt={3}/>
             </div>

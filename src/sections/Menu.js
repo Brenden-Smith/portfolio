@@ -46,7 +46,7 @@ function Menu(props) {
           </Grid>
           <Grid item>
             <Box pt={3}/>
-            <Container maxWidth="md"><Typography variant="caption">Created with React and MaterialUI by Brenden Smith</Typography></Container>
+            <Container maxWidth="md"><Typography variant="caption">Created with React and MaterialUI</Typography></Container>
           </Grid>
         </Grid>
       </div>
