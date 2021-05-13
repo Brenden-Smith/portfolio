@@ -76,6 +76,9 @@ const useStyles = makeStyles((theme) => ({
       minWidth: theme.spacing(5),
       minHeight: theme.spacing(5),
     },
+    root: {
+      maxWidth: '100vw',
+    }
   }));
 
 let theme = createMuiTheme();

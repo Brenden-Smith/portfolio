@@ -35,7 +35,7 @@ function About(props) {
   };
 
     return (
-      <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh' }}>
+      <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh'}}>
         <Grid container direction="column" align="center" alignItems="center" justify="center" style={{ minHeight: '100vh' }}>
           <Grid item xs={10}>
             <ThemeProvider theme={theme}>
