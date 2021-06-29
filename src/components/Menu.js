@@ -17,7 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import avatar from '../assets/img/profile.jpg';
 
 // Widgets
-import Socials from '../widgets/Socials';
+import Socials from './Socials';
 
 // Files
 import resume from '../assets/pdf/Brenden_Smith_Resume.pdf';
@@ -46,7 +46,7 @@ function Menu(props) {
           </Grid>
           <Grid item>
             <Box pt={3}/>
-            <Container maxWidth="md"><Typography variant="caption">Created with React and MaterialUI</Typography></Container>
+            <Container maxWidth="md"><Typography variant="caption"><Box color="text.primary">Created with React and MaterialUI</Box></Typography></Container>
           </Grid>
         </Grid>
       </div>
