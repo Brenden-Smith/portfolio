@@ -18,16 +18,9 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import { Link } from "react-scroll";
 import Typography from '@material-ui/core/Typography';
-
-// Icons
-import CloseIcon from '@material-ui/icons/Close';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 // Images
 import gro from '../assets/img/gro.png';
@@ -68,7 +61,7 @@ function ProjectCard(props) {
     }
   
     return (
-      <div>
+      <div className={classes.container}>
         <Badge className={classes.badgeMargin} classes={{ badge: classes.badge}} badgeContent={"Winner"} invisible={!_awardVisible} style={{color: 'yellow', background: 'white'}}>
           <Card className={classes.prjcard} onClick={handleClickOpen}>
             <CardActionArea className={classes.prjcard} onClick={handleClickOpen}>
@@ -94,20 +87,15 @@ function ProjectCard(props) {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
           >
-            {/* <DialogTitle id="alert-dialog-title">
-              <IconButton onClick={handleClose} color="black">
-                <CloseIcon/> 
-              </IconButton>   
-            </DialogTitle> */}
             <DialogContent alignItems="center" justify="center" align="center"> 
               <DialogContentText id="alert-dialog-description">
                 <Avatar src={props.prj.image}/>
                 <p/>
-                <Typography variant="h5" style={{ color: 'black' }}>{props.prj.title}</Typography>
+                <Typography variant="h5">{props.prj.title}</Typography>
                 <p/>
                 <Collapse in={_awardVisible}>
                   <Badge classes={{ badge: classes.badge}} badgeContent={"Winner"} invisible={!_awardVisible} style={{color: 'yellow', background: 'white'}}/>
-                  <p style={{color: 'black'}}>{props.prj.award}</p>
+                  <p>{props.prj.award}</p>
                 </Collapse>
                 {props.prj.excerpt}.
                 {props.prj.description}
@@ -129,7 +117,7 @@ function ProjectCard(props) {
     );
   }
 
-function Projects(props) {
+export default function Projects(props) {
 
     const classes = props.style;
   
@@ -186,7 +174,7 @@ function Projects(props) {
           <Grid item xs={12} sm={0}>
             <div>
               <Hidden smUp>
-                <Typography variant="caption">Created with React and MaterialUI</Typography>
+                <Typography variant="caption"><Box color="text.primary">Created with React and MaterialUI</Box></Typography>
               </Hidden>
               <Box pt={3}/>
             </div>
@@ -195,5 +183,3 @@ function Projects(props) {
       </div>
     )
   }
-
-  export default Projects;

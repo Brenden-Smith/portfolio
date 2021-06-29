@@ -27,16 +27,16 @@ function Socials(props) {
     return(
         <Grid container direction="row" justify="center" align="center" spacing={1}>
             <Grid item xs={3} sm={6} md={3} lg={2.5} xl={2}>
-              <a href={socials.GitHub} color="inherit" target="_blank" rel="noopener noreferrer" mx="auto"><GitHubIcon className={classes.github}/></a>
+              <a href={socials.GitHub} color="text.primary" target="_blank" rel="noopener noreferrer" mx="auto"><GitHubIcon className={classes.github}/></a>
             </Grid>
             <Grid item xs={3} sm={6} md={3} lg={2.5} xl={2}>
-              <a href={socials.Instagram} color="inherit" target="_blank" rel="noopener noreferrer" mx="auto"><InstagramIcon className={classes.large}/></a>
+              <a href={socials.Instagram} color="primary" target="_blank" rel="noopener noreferrer" mx="auto"><InstagramIcon className={classes.large}/></a>
             </Grid>
             <Grid item xs={3} sm={6} md={3} lg={2.5} xl={2}>
-              <a href={socials.LinkedIn} color="inherit" target="_blank" rel="noopener noreferrer"><LinkedInIcon className={classes.large}/></a>
+              <a href={socials.LinkedIn} color="primary" target="_blank" rel="noopener noreferrer"><LinkedInIcon className={classes.large}/></a>
             </Grid>
             <Grid item xs={3} sm={6} md={3} lg={2.5} xl={2}>
-              <a href={socials.Twitter} color="inherit" target="_blank" rel="noopener noreferrer"><TwitterIcon className={classes.large}/></a>
+              <a href={socials.Twitter} color="primary" target="_blank" rel="noopener noreferrer"><TwitterIcon className={classes.large}/></a>
             </Grid>
           </Grid>
     );
