@@ -4,6 +4,22 @@
     "frameworks": "Flutter • Firebase • React • React Native • SwiftUI",
     "projects": [
         {
+            "name": "Down",
+            "line1": "Software Engineer",
+            "line2": "Down is an application designed to connect users to events going on in their area and foster connections between eventgoers",
+            "line3": "I am currently a Software Engineer (Phase I and II) for Down. I utilize React Native, JavaScript, and Firebase to work on full-stack development.",
+            "visit": "Visit Website",
+            "link": "https://joindown.com"
+        },
+        {
+            "name": "Gro",
+            "line1": "BeachHacks 2021",
+            "line2": "Gro is an application designed to help users care for their plants by providing them with reminders and a journal for each plant",
+            "line3": "I built the back-end aspects of this application, such as user authentication and cloud storage, using Firebase. I also implemented the trefle.io API to use as the plant database, and I worked on various front-end aspects with Flutter.",
+            "visit": "View GitHub",
+            "link": "https://github.com/Brenden-Smith/Gro"
+        },
+        {
             "name": "Hermes" ,
             "line1": "Google Solution Challenge 2021",
             "line2": "Hermes is an application that connects students in need of resources to donors willing to provide those resources", 
@@ -20,12 +36,20 @@
             "link": "https://github.com/Brenden-Smith/Journey"
         },
         {
-            "name": "Gro",
-            "line1": "BeachHacks 2021",
-            "line2": "Gro is an application designed to help users care for their plants by providing them with reminders and a journal for each plant",
-            "line3": "I built the back-end aspects of this application, such as user authentication and cloud storage, using Firebase. I also implemented the trefle.io API to use as the plant database, and I worked on various front-end aspects with Flutter.",
-            "visit": "View GitHub",
-            "link": "https://github.com/Brenden-Smith/Gro"
+            "name": "Tyde Software",
+            "line1": "Freelance Software Development",
+            "line2": "I am a Founder and Technical Lead for Tyde Software, a project I started to provide software solutions to small businesses.",
+            "line3": "Completed one major project for a local business by developing a modern and sleek website with the React framework to improve their customer outreach.",
+            "visit": "View Website",
+            "link": "https://tydesoftare.com"
+        },
+        {
+            "name": "YouTube Sync",
+            "line1": "Personal Project",
+            "line2": "YouTube Sync is a web application designed to allow users to watch YouTube videos simultaneously with their friends.",
+            "line3": "I am currently utilizing React, Firebase, Node.js, Socket.io, and Express to create this project. You can view the demo below!",
+            "visit": "View Demo (Coming Soon)",
+            "link": "https://brenden-smith.com"
         }
     ]
 }
