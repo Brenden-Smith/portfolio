@@ -38,7 +38,7 @@ function ProjectCard(props) {
     };
   
     const classes = props.style;
-    const img = require(`../assets/img/${props.prj.name.toLowerCase()}.png`).default;
+    const img = require(`../assets/img/${props.prj.name.toLowerCase().replace(/\s+/g, '')}.png`).default;
   
     
     var _awardVisible = false;
