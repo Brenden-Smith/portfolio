@@ -22,23 +22,8 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 
-// Images
-import gro from '../assets/img/gro.png';
-import hermes from '../assets/img/hermes.png';
-import journey from '../assets/img/journey.png';
-
-class Project {
-
-    constructor(title, award, excerpt, description, image, type, link) {
-      this.title = title;
-      this.award = award;
-      this.excerpt = excerpt;
-      this.description = description;
-      this.image = image;
-      this.type = type;
-      this.link = link;
-    }
-  }
+// Assets
+import info from '../info.json';
 
 function ProjectCard(props) {
 
@@ -53,10 +38,12 @@ function ProjectCard(props) {
     };
   
     const classes = props.style;
+    const img = require(`../assets/img/${props.prj.name.toLowerCase()}.png`).default;
   
+    
     var _awardVisible = false;
   
-    if (props.prj.award.search("Winner")!==-1) {
+    if (props.prj.line1.search("Winner")!==-1) {
       _awardVisible = true;
     }
   
@@ -67,15 +54,15 @@ function ProjectCard(props) {
             <CardActionArea className={classes.prjcard} onClick={handleClickOpen}>
                 <CardMedia
                   className={classes.media}
-                  image={props.prj.image}
-                  title={props.prj.title}
+                  image={img}
+                  title={props.prj.name}
                 />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {props.prj.title}
+                  {props.prj.name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {props.prj.excerpt.substring(0, 75)}...
+                  {props.prj.line2.substring(0, 75)}...
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -89,16 +76,16 @@ function ProjectCard(props) {
           >
             <DialogContent alignItems="center" justify="center" align="center"> 
               <DialogContentText id="alert-dialog-description">
-                <Avatar src={props.prj.image}/>
+                <Avatar src={img}/>
                 <p/>
-                <Typography variant="h5">{props.prj.title}</Typography>
-                <p/>
+                <Typography variant="h5">{props.prj.name}</Typography>
                 <Collapse in={_awardVisible}>
+                  <p/>
                   <Badge classes={{ badge: classes.badge}} badgeContent={"Winner"} invisible={!_awardVisible} style={{color: 'yellow', background: 'white'}}/>
-                  <p>{props.prj.award}</p>
                 </Collapse>
-                {props.prj.excerpt}.
-                {props.prj.description}
+                <p>{props.prj.line1}</p>
+                {props.prj.line2}
+                {props.prj.line3}
               </DialogContentText>
             </DialogContent>
             <DialogActions justify="center" alignItems="center">
@@ -107,7 +94,7 @@ function ProjectCard(props) {
                 Close 
               </Button>  
               <Button href={props.prj.link} target="_blank" color="primary" justify="center" align="center">
-                {props.prj.type}
+                {props.prj.visit}
               </Button>
               <div style={{flex: '1 0 0'}} />
             </DialogActions>
@@ -121,35 +108,6 @@ export default function Projects(props) {
 
     const classes = props.style;
   
-    const projectList = {
-      Hermes : new Project(
-        "Hermes",
-        "Google Solution Challenge 2021",
-        "Hermes is an application that connects students in need of resources to donors willing to provide those resources", 
-        "I worked in a team of four to design this for the Google DSC Solution Challenge 2021. We primarily used Flutter to design the front-end, and Firebase to do the back-end. I specifically worked on the visual aspects of the home view and profile view.", 
-        hermes,
-        "View GitHub",
-        "https://github.com/danieljo09/Hermes"),
-      Journey: new Project(
-        "Journey",
-        "MarinaHacks 2021 Winner - Mental Health",
-        "Journey is an application designed to help users keep track of their moods and thoughts",
-        "I worked in a team of four to design this for MarinaHacks 2021. We designed this app with Flutter, Dart, YouTube API, and Zen Quotes API. Specifically, I did both front and back-end work on this project, including implementing the quotes API and working with the data structures.",
-        journey,
-        "View GitHub",
-        "https://github.com/Brenden-Smith/Journey",
-      ),
-      Gro : new Project(
-        "Gro",
-        "BeachHacks 2021",
-        "Gro is an application designed to help users care for their plants by providing them with reminders and a journal for each plant",
-        "I built the back-end aspects of this application, such as user authentication and cloud storage, using Firebase. I also implemented the trefle.io API to use as the plant database, and I worked on various front-end aspects with Flutter.",
-        gro,
-        "View GitHub",
-        "https://github.com/Brenden-Smith/Gro",
-      )
-    }
-  
     return (
       <div container align="center" alignItems="center" justify="center" style={{ minHeight: '100vh'}}>
         <Grid container direction="column" align="center" alignItems="center" justify="space-between" style={{ minHeight: '100vh'}}>
@@ -158,15 +116,13 @@ export default function Projects(props) {
             <Grid container direction="column" align="center" alignItems="center" justify="space-between">
               <Grid item xs={10}>
                 <Grid container xs={12} spacing={0} align="center" alignItems="center" justify="space-between">
-                  <Grid item sm={12} md={6} lg={4}>
-                    <ProjectCard prj={projectList.Hermes} style={classes}/>
-                  </Grid>
-                  <Grid item sm={12} md={6} lg={4}>
-                    <ProjectCard prj={projectList.Journey} style={classes}/>
-                  </Grid>
-                  <Grid item sm={12} md={6} lg={4}>
-                    <ProjectCard prj={projectList.Gro} style={classes}/>
-                  </Grid>
+                  {info.projects.map((proj) => {
+                    return (
+                      <Grid item sm={12} md={6} lg={4}>
+                        <ProjectCard prj={proj} style={classes} />
+                      </Grid>
+                    );
+                  })}
                 </Grid>
               </Grid>
             </Grid>

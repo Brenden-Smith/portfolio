@@ -1,0 +1,31 @@
+{
+    "headline": "STEM Advantage Scholar • Secretary for Association for Computing Machinery • Communications Lead for Google Developer Student Club • EXCEL STEM Peer Mentor at CSULB-HSI",
+    "languages": "C++ • CSS • Dart • HTML • Java • JavaScript • Python • Swift",
+    "frameworks": "Flutter • Firebase • React • React Native • SwiftUI",
+    "projects": [
+        {
+            "name": "Hermes" ,
+            "line1": "Google Solution Challenge 2021",
+            "line2": "Hermes is an application that connects students in need of resources to donors willing to provide those resources", 
+            "line3": "I worked in a team of four to design this for the Google DSC Solution Challenge 2021. We primarily used Flutter to design the front-end, and Firebase to do the back-end. I specifically worked on the visual aspects of the home view and profile view.", 
+            "visit": "View GitHub",
+            "link": "https://github.com/danieljo09/Hermes"
+        },
+        {
+            "name": "Journey",
+            "line1": "MarinaHacks 2021 Winner - Mental Health",
+            "line2": "Journey is an application designed to help users keep track of their moods and thoughts",
+            "line3": "I worked in a team of four to design this for MarinaHacks 2021. We designed this app with Flutter, Dart, YouTube API, and Zen Quotes API. Specifically, I did both front and back-end work on this project, including implementing the quotes API and working with the data structures.",
+            "visit": "View GitHub",
+            "link": "https://github.com/Brenden-Smith/Journey"
+        },
+        {
+            "name": "Gro",
+            "line1": "BeachHacks 2021",
+            "line2": "Gro is an application designed to help users care for their plants by providing them with reminders and a journal for each plant",
+            "line3": "I built the back-end aspects of this application, such as user authentication and cloud storage, using Firebase. I also implemented the trefle.io API to use as the plant database, and I worked on various front-end aspects with Flutter.",
+            "visit": "View GitHub",
+            "link": "https://github.com/Brenden-Smith/Gro"
+        }
+    ]
+}

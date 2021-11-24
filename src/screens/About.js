@@ -18,6 +18,7 @@ import Socials from '../components/Socials';
 // Assets
 import avatar from '../assets/img/profile.jpg';
 import resume from '../assets/pdf/Brenden_Smith_Resume.pdf';
+import info from "../info.json";
 
 function About(props) {
 
@@ -32,13 +33,13 @@ function About(props) {
                 <Box pt={3}/>
               </Hidden>
               <Typography variant="h2"><Box color="text.primary">Brenden Smith</Box></Typography>
-              <Box pt={1.5}/>
+            <Typography variant="h6"><Box color="text.primary">3rd Year Computer Science Student @ CSU Long Beach</Box></Typography>
               {/* <Container fixed direction="row" style={{ minHeight: '100px'}}><Typing/></Container> */}
-              <Box pt={1.5}/>
-              <Typography variant="h5"><Box color="text.primary">Student at CSU Long Beach • ASI Senator for College of Engineering • Undergraduate Research Assistant at CSU Long Beach</Box></Typography>
               <Box pt={3}/>
-              <Typography variant="subtitle1"><Box color="text.primary">C++ • CSS • Dart • HTML • Java • JavaScript • Python • Swift</Box></Typography>
-              <Typography variant="subtitle1"><Box color="text.primary">Flutter • Firebase • React • SwiftUI</Box></Typography>
+            <Typography variant="h5"><Box color="text.primary">{info.headline}</Box></Typography>
+              <Box pt={3}/>
+            <Typography variant="subtitle1"><Box color="text.primary">{info.languages}</Box></Typography>
+            <Typography variant="subtitle1"><Box color="text.primary">{info.frameworks}</Box></Typography>
               <Hidden smUp>
                 <Box pt={3}/>
                 <Grid container direction="row">
