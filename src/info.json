@@ -48,8 +48,8 @@
             "line1": "Personal Project",
             "line2": "YouTube Sync is a web application designed to allow users to watch YouTube videos simultaneously with their friends.",
             "line3": "I am currently utilizing React, Firebase, Node.js, Socket.io, and Express to create this project. You can view the demo below!",
-            "visit": "View Demo (Coming Soon)",
-            "link": "https://brenden-smith.com"
+            "visit": "View Demo",
+            "link": "https://videosync.brenden-smith.com"
         }
     ]
 }
