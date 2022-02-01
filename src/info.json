@@ -1,5 +1,5 @@
 {
-    "headline": "STEM Advantage Scholar • Secretary for Association for Computing Machinery • Communications Lead for Google Developer Student Club • EXCEL STEM Peer Mentor at CSULB-HSI",
+    "headline": "STEM Advantage Scholar • Secretary for Association for Computing Machinery • Communications Lead for Google Developer Student Club",
     "languages": "C++ • CSS • Dart • HTML • Java • JavaScript • Python • Swift",
     "frameworks": "Flutter • Firebase • Google Cloud • Node • React • React Native • SwiftUI",
     "projects": [
@@ -47,8 +47,8 @@
             "name": "YouTube Sync",
             "line1": "Personal Project",
             "line2": "YouTube Sync is a web application designed to allow users to watch YouTube videos simultaneously with their friends.",
-            "line3": "I am currently utilizing React, Firebase, Node.js, Socket.io, and Express to create this project. You can view the demo below!",
-            "visit": "View Demo",
+            "line3": "I am currently utilizing React, Firebase, Node.js, and Google Cloud to create this project. You can view the project below!",
+            "visit": "View Application",
             "link": "https://videosync.brenden-smith.com"
         }
     ]
