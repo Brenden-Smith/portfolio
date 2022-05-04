@@ -7,6 +7,16 @@
   max-width: fit-content;
   justify-content: center;
   display: flex;
+  
+}
+
+.hideScroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hideScroll::-webkit-scrollbar {
+  display: none;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {

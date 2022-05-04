@@ -13,6 +13,8 @@ export function AppIcon(props: any) {
         backgroundColor: "white",
         margin: "15px",
         overflow: "hidden",
+        height: "fit-content",
+        width: "fit-content",
       }}
     >
       <Tooltip
@@ -24,13 +26,13 @@ export function AppIcon(props: any) {
           className="AppIcon-container"
           sx={(theme) => ({ 
             backgroundImage: `url(${item.image})`,
-            [theme.breakpoints.between('sm', 'xl')]: {
-              width: props.large ? "200px" : "100px",
-              height: props.large ? "200px" : "100px",
+            [theme.breakpoints.up('sm',)]: {
+              width: props.large ? "150px" : "100px",
+              height: props.large ? "150px" : "100px",
             },
             [theme.breakpoints.down('sm')]: {
-              width: props.large === true ? "150px" : "75px",
-              height: props.large === true ? "150px" : "75px",
+              width: props.large === true ? "100px" : "75px",
+              height: props.large === true ? "100px" : "75px",
             },
           })}
           {...props}

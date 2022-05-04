@@ -25,6 +25,7 @@ export function AppDetails({ item }: { item: any }) {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "500px",
+          width: "85%",
         }}
         className="FrostedWindow-container"
       >

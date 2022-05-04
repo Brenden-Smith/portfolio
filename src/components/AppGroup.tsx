@@ -4,7 +4,6 @@ import {
   Divider,
   Grid,
   Hidden,
-  LinearProgress,
   Stack,
   Typography,
   useMediaQuery,
@@ -18,7 +17,6 @@ import projects from "../assets/data/projects";
 import work from "../assets/data/work";
 import { AppDetails } from "./AppDetails";
 import ProfilePicture from "../assets/img/profile.jpg";
-import { Box } from "@mui/system";
 import { Languages } from "./Languages";
 import { Frameworks } from "./Frameworks";
 import { About } from "./About";
@@ -30,7 +28,6 @@ export function AppGroup() {
   const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
   };
-
 
   const paginate = (newDirection: number) => {
     const n = (page + newDirection) % 3;
@@ -76,52 +73,62 @@ export function AppGroup() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              style={{
+                height: "75vh",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
               <Stack
-                direction="row"
-                spacing={5}
+                direction="column"
+                spacing={2}
                 alignItems="center"
                 sx={{
-                  position: "absolute",
-                  top: "40%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  width: "100vw",
+                  // position: "absolute",
+                  // top: "40%",
+                  // left: "50%",
+                  // transform: "translate(-50%, -50%)",
                   justifyContent: "center",
                 }}
               >
-                <Avatar
-                  src={ProfilePicture}
-                  sx={(theme) => ({
-                    [theme.breakpoints.down("sm")]: {
-                      height: "100px",
-                      width: "100px",
-                    },
-                    [theme.breakpoints.up("lg")]: {
-                      height: "200px",
-                      width: "200px",
-                    },
-                  })}
-                />
-                <Stack direction="column">
+                <Stack
+                  direction="row"
+                  spacing={query ? 2 : 5}
+                  alignItems="center"
+                >
+                  <Avatar
+                    src={ProfilePicture}
+                    sx={(theme) => ({
+                      [theme.breakpoints.down("sm")]: {
+                        height: "100px",
+                        width: "100px",
+                      },
+                      [theme.breakpoints.up("lg")]: {
+                        height: "200px",
+                        width: "200px",
+                      },
+                    })}
+                  />
                   <Typography
-                    variant={!query ? "h1" : "h2"}
+                    variant={!query ? "h1" : "h3"}
                     sx={{ color: "white" }}
                   >
                     Brenden Smith
                   </Typography>
-                  <Button
-                    sx={{
-                      color: "white",
-                      borderColor: "white",
-                      "&:hover": { borderColor: "white" },
-                    }}
-                    variant="outlined"
-                    onClick={() => update("about")}
-                  >
-                    <Typography variant="h6">Open "System Specs"</Typography>
-                  </Button>
                 </Stack>
+                <Button
+                  sx={{
+                    color: "white",
+                    borderColor: "white",
+                    "&:hover": { borderColor: "white" },
+                  }}
+                  variant="outlined"
+                  onClick={() => update("about")}
+                >
+                  <Typography variant="h6">Open "System Specs"</Typography>
+                </Button>
               </Stack>
             </motion.div>
           ) : selected === "about" ? (
@@ -130,63 +137,60 @@ export function AppGroup() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               style={{
-                alignItems: "center",
+                height: "75vh",
                 display: "flex",
                 flexDirection: "column",
-                position: !query ? "absolute" : "relative",
-                top: !query ? "40%" : undefined,
-                left: !query ? "50%" : undefined,
-                transform: !query ? "translate(-50%, -50%)" : undefined,
-                width: "100vw",
                 justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <Stack
-                direction="row"
-                spacing={5}
+                direction="column"
+                spacing={2}
                 alignItems="center"
-                sx={{
-                  width: "100vw",
-                  justifyContent: "center",
-                }}
+                justifyContent="center"
               >
-                <Avatar
-                  src={ProfilePicture}
-                  sx={(theme) => ({
-                    [theme.breakpoints.down("sm")]: {
-                      height: "100px",
-                      width: "100px",
-                    },
-                    [theme.breakpoints.up("lg")]: {
-                      height: "200px",
-                      width: "200px",
-                    },
-                  })}
-                />
-                <Stack direction="column">
+                <Stack
+                  direction="row"
+                  spacing={query ? 2 : 5}
+                  alignItems="center"
+                >
+                  <Avatar
+                    src={ProfilePicture}
+                    sx={(theme) => ({
+                      [theme.breakpoints.down("sm")]: {
+                        height: "100px",
+                        width: "100px",
+                      },
+                      [theme.breakpoints.up("lg")]: {
+                        height: "200px",
+                        width: "200px",
+                      },
+                    })}
+                  />
                   <Typography
-                    variant={!query ? "h1" : "h2"}
+                    variant={!query ? "h1" : "h3"}
                     sx={{ color: "white" }}
                   >
                     Brenden Smith
                   </Typography>
-                  <Button
-                    sx={{
-                      color: "white",
-                      borderColor: "white",
-                      "&:hover": { borderColor: "white" },
-                    }}
-                    variant="outlined"
-                    onClick={() => update("null")}
-                  >
-                    <Typography variant="h6">Close "System Specs"</Typography>
-                  </Button>
                 </Stack>
+                <Button
+                  sx={{
+                    color: "white",
+                    borderColor: "white",
+                    "&:hover": { borderColor: "white" },
+                  }}
+                  variant="outlined"
+                  onClick={() => update("null")}
+                >
+                  <Typography variant="h6">Close "System Specs"</Typography>
+                </Button>
               </Stack>
               <Hidden smDown>
                 <Grid
                   container
-                  sx={{ width: "50%", margin: "100px" }}
+                  sx={{ width: "75%", margin: "15px" }}
                   wrap="nowrap"
                 >
                   <Grid
@@ -268,7 +272,7 @@ export function AppGroup() {
                     justifyContent: "center",
                     width: "100%",
                     display: "flex",
-                    marginTop: "-30px"
+                    marginTop: "-30px",
                   }}
                 >
                   {"<  Swipe  >"}
@@ -280,65 +284,79 @@ export function AppGroup() {
           )}
         </AnimatePresence>
       </div>
-      <Grid
-        container
-        className="AppGroup-container"
-        zeroMinWidth
-        wrap="nowrap"
-        sx={{ overflow: "hidden", width: "100%" }}
-        component="footer"
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
-        <div
-          style={{
-            overflowX: query ? "scroll" : undefined,
-            flexDirection: "row",
-            display: "flex",
-            overflowY: "hidden",
+        <Grid
+          container
+          className="AppGroup-container"
+          zeroMinWidth
+          wrap="nowrap"
+          sx={{
+            overflow: "hidden",
+            width: "100%",
+            position: "relative",
+            bottom: !query ? 15 : 30,
+            margin: "15px",
           }}
         >
-          <Grid item sx={{ width: "fit-content" }}>
-            <motion.div layoutId="home">
-              <AppIcon
-                item={{
-                  title: "About",
-                  image: require("../assets/img/profile.jpg"),
-                }}
-                onClick={() => update("null")}
-              />
-            </motion.div>
-          </Grid>
-          <Divider
-            orientation="vertical"
-            flexItem
-            sx={{ borderRightWidth: 5, margin: "15px" }}
-          />
-          {work.map((item) => (
+          <div
+            className="hideScroll"
+            style={{
+              overflowX: query ? "scroll" : undefined,
+              flexDirection: "row",
+              display: "flex",
+              overflowY: "hidden",
+            }}
+          >
             <Grid item sx={{ width: "fit-content" }}>
-              <motion.div layoutId={item.title}>
-                <AppIcon onClick={() => update(item)} item={item} />
-              </motion.div>
-            </Grid>
-          ))}
-          <Divider
-            orientation="vertical"
-            flexItem
-            sx={{ borderRightWidth: 5, margin: "15px" }}
-          />
-          {projects.map((item) => (
-            <Grid item sx={{ width: "fit-content" }}>
-              <motion.div layoutId={item.title}>
+              <motion.div layoutId="home">
                 <AppIcon
-                  onClick={() => update(item)}
-                  item={item}
-                  size="100px"
+                  item={{
+                    title: "About",
+                    image: require("../assets/img/profile.jpg"),
+                  }}
+                  onClick={() => update("null")}
                 />
               </motion.div>
             </Grid>
-          ))}
-        </div>
-      </Grid>
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ borderRightWidth: 5, margin: "15px" }}
+            />
+            {work.map((item) => (
+              <Grid item sx={{ width: "fit-content" }}>
+                <motion.div layoutId={item.title}>
+                  <AppIcon onClick={() => update(item)} item={item} />
+                </motion.div>
+              </Grid>
+            ))}
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ borderRightWidth: 5, margin: "15px" }}
+            />
+            {projects.map((item) => (
+              <Grid item sx={{ width: "fit-content" }}>
+                <motion.div layoutId={item.title}>
+                  <AppIcon
+                    onClick={() => update(item)}
+                    item={item}
+                    size="100px"
+                  />
+                </motion.div>
+              </Grid>
+            ))}
+          </div>
+        </Grid>
+      </div>
     </div>
   );
 }
-
-
