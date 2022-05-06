@@ -16,7 +16,7 @@ import "../styles.css";
 import projects from "../assets/data/projects";
 import work from "../assets/data/work";
 import { AppDetails } from "./AppDetails";
-import ProfilePicture from "../assets/img/profile.jpg";
+import ProfilePicture from "../assets/img/profile.png";
 import { Languages } from "./Languages";
 import { Frameworks } from "./Frameworks";
 import { About } from "./About";
@@ -320,7 +320,7 @@ export function AppGroup() {
                 <AppIcon
                   item={{
                     title: "About",
-                    image: require("../assets/img/profile.jpg"),
+                    image: require("../assets/img/profile.png"),
                   }}
                   onClick={() => update("null")}
                 />
