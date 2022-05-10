@@ -13,13 +13,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { AppIcon } from "./AppIcon";
 import "../styles.css";
-import projects from "../assets/data/projects";
-import work from "../assets/data/work";
+import { projects, work } from "../data";
 import { AppDetails } from "./AppDetails";
 import ProfilePicture from "../assets/img/profile.png";
-import { Languages } from "./Languages";
-import { Frameworks } from "./Frameworks";
+import { ProgressBarBox } from "./ProgressBarBox";
 import { About } from "./About";
+import { info } from "../data";;
+
+function Languages() {
+  return <ProgressBarBox title="Languages" items={info.languages} />;
+}
+
+function Frameworks() {
+  return <ProgressBarBox title="Frameworks" items={info.frameworks} />;
+}
 
 export function AppGroup() {
   const [selected, setSelected] = useState<any>("null");
