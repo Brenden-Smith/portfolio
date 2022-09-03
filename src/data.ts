@@ -3,6 +3,8 @@ import { ReactComponent as JSSvg } from "./assets/svg/js.svg";
 import { ReactComponent as GoogleSvg } from "./assets/svg/google.svg";
 import { ReactComponent as FlutterSvg } from "./assets/svg/flutter.svg";
 import { ReactComponent as JavaSvg } from "./assets/svg/java.svg";
+import { ReactComponent as AWSSvg } from "./assets/svg/aws.svg";
+import { ReactComponent as DatabaseSVG } from "./assets/svg/database.svg";
 
 
 export const projects = [
@@ -10,7 +12,7 @@ export const projects = [
     title: "Video Sync",
     time: "January 2022 - Present",
     description: [
-      "Video Sync is a web application designed to allow users to watch YouTube videos simultaneously with their friends.",
+      "Video Sync is a web applicatiBack-End Software Engineering Intern on the RIA Engineering team in the Global Markets Divisionon designed to allow users to watch YouTube videos simultaneously with their friends.",
       "I am currently utilizing React, Firebase, Node.js, and Google Cloud to create this project. You can view the project below!",
     ],
     image: require("./assets/img/video.jpg"),
@@ -147,7 +149,9 @@ export const work = [
     position: "Engineering Summer Analyst",
     time: "June 2022 - August 2022",
     description: [
-      "Incoming Engineering Summer Analyst in the Global Markets division",
+      "Selected to participate in the Goldman Sachs Summer Analyst Program as a part of 1.35% of 236,000 applicants.",
+      "Back-End Software Engineering Intern on the RIA Engineering team in the Global Markets Division",
+      "Utilized Java, Spring, AWS, and SQL to develop a robust testing suite for the RIA platform",
     ],
     image: require("./assets/img/goldman.png"),
     stack: [
@@ -155,6 +159,14 @@ export const work = [
         name: "Java",
         icon: JavaSvg,
       },
+      {
+        name: "SQL",
+        icon: DatabaseSVG,
+      },
+      {
+        name: "Amazon Web Services",
+        icon: AWSSvg,
+      }
     ],
   },
   {
