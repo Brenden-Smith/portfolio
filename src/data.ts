@@ -229,7 +229,7 @@ export const info = {
       bold: "California State University, Long Beach",
     },
     {
-      text: "Incoming Engineering Summer Analyst at",
+      text: "Previous Engineering Summer Analyst at",
       bold: "Goldman Sachs",
     },
     {
@@ -248,7 +248,7 @@ export const info = {
   languages: [
     {
       name: "C++",
-      value: 60,
+      value: 75,
     },
     {
       name: "CSS",
@@ -260,7 +260,7 @@ export const info = {
     },
     {
       name: "Java",
-      value: 70,
+      value: 85,
     },
     {
       name: "JavaScript",
@@ -271,18 +271,14 @@ export const info = {
       value: 80,
     },
     {
-      name: "Swift",
-      value: 40,
-    },
-    {
       name: "TypeScript",
       value: 95,
     },
   ],
   frameworks: [
     {
-      name: "Flutter",
-      value: 65,
+      name: "AWS",
+      value: 80,
     },
     {
       name: "Firebase",
