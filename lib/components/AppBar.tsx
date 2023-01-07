@@ -6,12 +6,7 @@ import Router, { useRouter } from "next/router";
 export function AppBar() {
   return (
     <div className="flex justify-center fixed top-auto bottom-0 p-5 w-full">
-      <FrostedWindow
-        className="flex flex-row space-x-5 overflow-x-scroll"
-        style={{
-          overflowX: "scroll",
-        }}
-      >
+      <FrostedWindow className="flex flex-row space-x-5 overflow-x-scroll">
         <Item
           src="https://avatars.githubusercontent.com/u/61305154?v=4"
           alt="About"
@@ -49,17 +44,13 @@ export function AppBar() {
 function Item({ route, ...props }: { route: string } & ImageProps) {
   const router = useRouter();
   return (
-    <div
-      className="rounded-3xl"
-      style={{
-        width: "100px",
-        height: "100px",
-      }}
-    >
-      <Tooltip
-        title={<Typography>{props.alt}</Typography>}
-        placement="top"
-        arrow
+    <Tooltip title={<Typography>{props.alt}</Typography>} placement="top" arrow>
+      <div
+        className="rounded-3xl"
+        style={{
+          width: "100px",
+          height: "100px",
+        }}
       >
         <ButtonBase
           onClick={() => router.push(`/${route}`, undefined, { shallow: true })}
@@ -76,7 +67,7 @@ function Item({ route, ...props }: { route: string } & ImageProps) {
             className={`rounded-3xl ${props.className}`}
           />
         </ButtonBase>
-      </Tooltip>
-    </div>
+      </div>
+    </Tooltip>
   );
 }

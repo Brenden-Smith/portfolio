@@ -11,6 +11,8 @@ export function FrostedWindowLayout({
   image,
   children,
   tags,
+  className,
+  ...props
 }: {
   title: string;
   position: string;
@@ -18,10 +20,22 @@ export function FrostedWindowLayout({
   endDate?: string;
   image: string;
   tags: ReactNode[];
+  className?: string;
+
   children: ReactNode | ReactNode[];
-}) {
-  function Sidebar() {
-    return (
+} & React.HTMLAttributes<HTMLDivElement>) {
+  const breakpoint = useMediaQuery("(max-width: 600px)");
+
+  return (
+    <FrostedWindow
+      className={"flex " + (breakpoint ? "flex-col" : "flex-row")}
+      style={{
+        maxWidth: "1150px",
+        width: "90vw",
+        maxHeight: "calc(100vh - 198px)",
+        overflowY: "auto",
+      }}
+    >
       <div className="flex flex-col items-center space-y-5 p-5">
         <Image
           src={image}
@@ -41,32 +55,19 @@ export function FrostedWindowLayout({
             {startDate} - {endDate}
           </Typography>
         )}
-        <div className="flex flex-row space-x-1">{tags}</div>
+        <div className="flex flex-row space-x-5">{tags}</div>
       </div>
-    );
-  }
-
-  function Content() {
-    return <div className="flex flex-col space-y-5 p-5">{children}</div>;
-  }
-
-  const breakpoint = useMediaQuery("(max-width: 600px)");
-
-  return (
-    <FrostedWindow
-      className={"flex " + (breakpoint ? "flex-col" : "flex-row")}
-      style={{
-        maxWidth: "1150px",
-        width: "90vw",
-        maxHeight: "calc(100vh - 198px)",
-        overflowY: "auto",
-      }}
-    >
-      <Sidebar />
       {!breakpoint && (
         <Divider orientation="vertical" flexItem className="mr-5 ml-3" />
       )}
-      <Content />
+      <div
+        className={`flex flex-col space-y-5 p-5 h-auto ${
+          className || ""
+        }`}
+        {...props}
+      >
+        {children}
+      </div>
     </FrostedWindow>
   );
 }

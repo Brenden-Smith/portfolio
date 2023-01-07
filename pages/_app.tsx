@@ -21,10 +21,13 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       >
         <ParticlesBackground />
-        <main className="w-full h-full" style={{
-          paddingTop: "90px",
-          paddingBottom: "64px",
-        }}>
+        <main
+          className="w-full h-full z-50"
+          style={{
+            paddingTop: "90px",
+            paddingBottom: "64px",
+          }}
+        >
           <Component {...pageProps} />
         </main>
       </div>

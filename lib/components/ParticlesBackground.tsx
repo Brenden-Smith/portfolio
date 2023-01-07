@@ -49,7 +49,7 @@ export function ParticlesBackground() {
   };
 
   return (
-    <div className="absolute blur-md h-screen w-screen">
+    <div className="absolute blur-md h-screen w-screen z-0">
       <Particles id="tsparticles" init={particlesInit} options={options} />
     </div>
   );
