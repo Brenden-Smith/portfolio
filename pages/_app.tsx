@@ -13,14 +13,21 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { ParticlesBackground } from "../lib/components";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps, router }: AppProps) {
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    setHeight(window?.innerHeight);
+  }, [window]);
+
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
     <div
       className="w-screen overflow-hidden"
       style={{
-        height: window?.innerHeight,
+        height: height,
       }}
     >
       <ThemeProvider
@@ -40,7 +47,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             style={
               breakpoint
                 ? {
-                    height: "-webkit-fill-available",
+                    height: `calc(${height}px - 180px))`,
                     paddingTop: "5px",
                   }
                 : {
