@@ -1,43 +1,49 @@
-import { ButtonBase, Divider, Tooltip, Typography } from "@mui/material";
+import {
+  ButtonBase,
+  Divider,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Image, { ImageProps } from "next/image";
 import { FrostedWindow } from "./FrostedWindow";
 import Router, { useRouter } from "next/router";
 
 export function AppBar() {
+  const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
-    <div className="flex justify-center fixed top-auto bottom-0 p-5 w-full">
-      <FrostedWindow className="flex flex-row space-x-5 overflow-x-scroll">
-        <Item
-          src="https://avatars.githubusercontent.com/u/61305154?v=4"
-          alt="About"
-          route=""
-        />
-        <Divider orientation="vertical" flexItem />
-        <Item
-          src="/img/handle.jpg"
-          alt="Handle Delivery"
-          route="experience/handle-delivery"
-        />
-        <Item
-          src="/img/goldman.png"
-          alt="Goldman Sachs"
-          route="experience/goldman-sachs"
-        />
-        <Item src="/img/down.jpg" alt="Down" route="experience/down" />
-        <Divider orientation="vertical" flexItem />
-        <Item
-          src="/img/thumbo.png"
-          alt="Thumbo"
-          className="bg-black"
-          route="projects/thumbo"
-        />
-        <Item
-          src="/img/video.jpg"
-          alt="Video Sync"
-          route="projects/video-sync"
-        />
-      </FrostedWindow>
-    </div>
+    <FrostedWindow
+      className="flex flex-row space-x-5 overflow-x-scroll"
+      style={{
+        height: breakpoint ? "20%" : "100px",
+      }}
+    >
+      <Item
+        src="https://avatars.githubusercontent.com/u/61305154?v=4"
+        alt="About"
+        route=""
+      />
+      <Divider orientation="vertical" flexItem />
+      <Item
+        src="/img/handle.jpg"
+        alt="Handle Delivery"
+        route="experience/handle-delivery"
+      />
+      <Item
+        src="/img/goldman.png"
+        alt="Goldman Sachs"
+        route="experience/goldman-sachs"
+      />
+      <Item src="/img/down.jpg" alt="Down" route="experience/down" />
+      <Divider orientation="vertical" flexItem />
+      <Item
+        src="/img/thumbo.png"
+        alt="Thumbo"
+        className="bg-black"
+        route="projects/thumbo"
+      />
+      <Item src="/img/video.jpg" alt="Video Sync" route="projects/video-sync" />
+    </FrostedWindow>
   );
 }
 

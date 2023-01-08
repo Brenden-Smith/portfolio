@@ -22,6 +22,56 @@ export default function App({ Component, pageProps, router }: AppProps) {
     setHeight(window?.innerHeight);
   }, []);
 
+  function Content() {
+    return (
+      <AnimatePresence>
+        <motion.main
+          className={`w-screen ${!breakpoint && "h-screen flex items-center"}`}
+          style={
+            breakpoint
+              ? {
+                  // height: `calc(${height}px - 180px))`,
+                  height: "80%",
+
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
+                }
+              : {
+                  paddingBottom: "180px",
+                }
+          }
+          key={router.route}
+          initial="pageInitial"
+          animate="pageAnimate"
+          exit="pageExit"
+          variants={{
+            pageInitial: {
+              opacity: 0,
+              scale: 0.5,
+            },
+            pageAnimate: {
+              opacity: 1,
+              scale: 1,
+              transition: {
+                delay: 0.4,
+                duration: 0.3,
+              },
+            },
+            pageExit: {
+              opacity: 0,
+              transition: {
+                duration: 0.4,
+              },
+              scale: 1,
+            },
+          }}
+        >
+          <Component {...pageProps} />
+        </motion.main>
+      </AnimatePresence>
+    );
+  }
+
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
     <div
@@ -39,51 +89,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
       >
         <CssBaseline />
         <ParticlesBackground />
-        <AnimatePresence>
-          <motion.main
-            className={`w-screen ${
-              !breakpoint && "h-screen flex items-center"
-            }`}
-            style={
-              breakpoint
-                ? {
-                    height: `calc(${height}px - 180px))`,
-                    paddingTop: "5px",
-                  }
-                : {
-                    paddingBottom: "180px",
-                  }
-            }
-            key={router.route}
-            initial="pageInitial"
-            animate="pageAnimate"
-            exit="pageExit"
-            variants={{
-              pageInitial: {
-                opacity: 0,
-                scale: 0.5,
-              },
-              pageAnimate: {
-                opacity: 1,
-                scale: 1,
-                transition: {
-                  delay: 0.4,
-                  duration: 0.3,
-                },
-              },
-              pageExit: {
-                opacity: 0,
-                transition: {
-                  duration: 0.4,
-                },
-                scale: 1,
-              },
-            }}
-          >
-            <Component {...pageProps} />
-          </motion.main>
-        </AnimatePresence>
-        <AppBar />
+        {!breakpoint && <Content />}
+        <footer className="flex justify-center fixed top-auto bottom-0 p-5 w-full">
+          {breakpoint && <Content />}
+          <AppBar />
+        </footer>
       </ThemeProvider>
     </div>
   );
