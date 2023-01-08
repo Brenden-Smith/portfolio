@@ -20,7 +20,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <div
       className="w-screen overflow-hidden"
       style={{
-        height: breakpoint ? "-webkit-fill-available" : "100vh",
+        height: window.innerHeight,
       }}
     >
       <ThemeProvider
