@@ -13,9 +13,12 @@ export function AppBar() {
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
     <FrostedWindow
-      className="flex flex-row space-x-5 overflow-x-scroll"
+      className="flex flex-row space-x-5 overflow-x-scroll m-5"
       style={{
-        height: breakpoint ? "20%" : "100px",
+        height: `${breakpoint && "20%"}`,
+        maxWidth: "90vw",
+        width: "fit-content",
+        marginLeft: "15px",
       }}
     >
       <Item

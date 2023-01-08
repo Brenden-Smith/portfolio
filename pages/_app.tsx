@@ -90,7 +90,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <CssBaseline />
         <ParticlesBackground />
         {!breakpoint && <Content />}
-        <footer className="flex justify-center fixed top-auto bottom-0 p-5 w-full">
+        <footer className="flex flex-col justify-center items-center fixed top-auto bottom-0 w-screen">
           {breakpoint && <Content />}
           <AppBar />
         </footer>
