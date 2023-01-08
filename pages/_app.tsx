@@ -20,7 +20,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <div
       className="w-screen overflow-hidden"
       style={{
-        height: window.innerHeight,
+        height: window?.innerHeight,
       }}
     >
       <ThemeProvider
