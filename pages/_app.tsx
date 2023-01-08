@@ -13,15 +13,8 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { ParticlesBackground } from "../lib/components";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps, router }: AppProps) {
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    setHeight(window?.innerHeight);
-  }, []);
-
   function Content() {
     return (
       <AnimatePresence>
@@ -30,11 +23,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
           style={
             breakpoint
               ? {
-                  // height: `calc(${height}px - 180px))`,
-                  height: "80%",
-
+                  height: "70%",
                   paddingTop: "10px",
-                  paddingBottom: "10px",
+                  paddingBottom: "30px",
                 }
               : {
                   paddingBottom: "180px",
@@ -74,27 +65,20 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
-    <div
-      className="w-screen overflow-hidden"
-      style={{
-        height: height,
-      }}
+    <ThemeProvider
+      theme={createTheme({
+        palette: {
+          mode: "dark",
+        },
+      })}
     >
-      <ThemeProvider
-        theme={createTheme({
-          palette: {
-            mode: "dark",
-          },
-        })}
-      >
-        <CssBaseline />
-        <ParticlesBackground />
-        {!breakpoint && <Content />}
-        <footer className="flex flex-col justify-center items-center fixed top-auto bottom-0 w-screen">
-          {breakpoint && <Content />}
-          <AppBar />
-        </footer>
-      </ThemeProvider>
-    </div>
+      <CssBaseline />
+      <ParticlesBackground />
+      {!breakpoint && <Content />}
+      <footer className="flex flex-col justify-center items-center fixed top-auto bottom-0 w-screen">
+        {breakpoint && <Content />}
+        <AppBar />
+      </footer>
+    </ThemeProvider>
   );
 }
