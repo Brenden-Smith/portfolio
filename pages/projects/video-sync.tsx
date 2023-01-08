@@ -42,21 +42,20 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <DarkCard>
-            <CardHeader title="Description" />
+          <DarkCard title="Description">
             <CardContent>
               Video Sync is a personal project that I created so that I could
               watch online videos simultaneously with my friends. I was inspired
-              to create this project because I wasn{`'`}t happy with the existing
-              solutions. I wanted to create a solution that was easy to use, had
-              a clean interface, and was free. I created the front-end using
-              React/Next.js and the back end using Firebase and Google Cloud.
+              to create this project because I wasn{`'`}t happy with the
+              existing solutions. I wanted to create a solution that was easy to
+              use, had a clean interface, and was free. I created the front-end
+              using React/Next.js and the back end using Firebase and Google
+              Cloud.
               <div style={{ height: "16px" }} />
               Check out the application and the repository below!
             </CardContent>
           </DarkCard>
-          <DarkCard>
-            <CardHeader title="More" />
+          <DarkCard title="More">
             <CardContent className="space-x-5">
               <Button
                 variant="contained"

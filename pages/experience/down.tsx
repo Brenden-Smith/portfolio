@@ -41,8 +41,7 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <DarkCard>
-            <CardHeader title="Description" />
+          <DarkCard title="Description">
             <CardContent>
               Down is a social media startup that aims to connect users with
               events going on in their area. I was responsible for the
@@ -59,8 +58,7 @@ export default function Page() {
               December 2022 for the beta development phase.
             </CardContent>
           </DarkCard>
-          <DarkCard>
-            <CardHeader title="More" />
+          <DarkCard title="More">
             <CardContent>
               <Button
                 variant="contained"

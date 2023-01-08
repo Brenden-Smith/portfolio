@@ -1,12 +1,12 @@
-import { CardContent, CardHeader } from "@mui/material";
+import { CardContent, CardHeader, useMediaQuery } from "@mui/material";
 import { DarkCard } from "../DarkCard";
 import { Icon } from "../Icon";
 
 export default function Skills() {
+  const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
-    <DarkCard>
-      <CardHeader title="Skills" />
-      <CardContent className="flex flex-row flex-wrap">
+    <DarkCard title="Skills">
+      <CardContent className={`flex flex-row flex-wrap ${breakpoint && "justify-center"}`}>
         <Icon src="/icon/aws.svg" size="large" alt="AWS" />
         <Icon src="/icon/c.svg" size="large" alt="C" />
         <Icon src="/icon/cpp.svg" size="large" alt="C++" />

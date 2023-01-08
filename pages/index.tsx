@@ -88,8 +88,7 @@ export default function Page() {
             </IconButton>,
           ]}
         >
-          <DarkCard>
-            <CardHeader title="About Me" />
+          <DarkCard title="About Me">
             <CardContent>
               Hello there! My name is Brenden Smith and I am a software engineer
               based in the United States. I am currently a <b>senior</b> at{" "}

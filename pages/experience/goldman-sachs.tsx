@@ -40,8 +40,7 @@ export default function Page() {
             />,
           ]}
         >
-          <DarkCard>
-            <CardHeader title="Description" />
+          <DarkCard title="Description">
             <CardContent>
               Selected as part of 1.35% of an applicant pool of 236,000
               candidates for a summer internship at the company, over the summer

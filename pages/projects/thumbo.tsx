@@ -49,8 +49,7 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <DarkCard>
-            <CardHeader title="Description" />
+          <DarkCard title="Description">
             <CardContent>
               Thumbo is a startup that aims to engage fans at sporting events by
               providing mid-game activities for prizes. I worked with another
@@ -63,8 +62,7 @@ export default function Page() {
               application.
             </CardContent>
           </DarkCard>
-          <DarkCard>
-            <CardHeader title="More" />
+          <DarkCard title="More">
             <CardContent>
               <Button
                 variant="contained"
