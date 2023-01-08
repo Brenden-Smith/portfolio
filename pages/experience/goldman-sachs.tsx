@@ -50,9 +50,8 @@ export default function Page() {
               directly benefited the team and the company as a whole, and I was
               able to learn a lot about the company and the industry as a whole.
               I was also able to learn a lot about the company{`'`}s culture and
-              values, and I was able to work with some of the most talented
-              people in the industry. In my project, I utilized Java, Spring,
-              SQL, and Amazon Web Services.
+              values, and learn from talented software engineers. In my project,
+              I utilized Java, Spring, SQL, and Amazon Web Services.
             </CardContent>
           </DarkCard>
         </FrostedWindowLayout>

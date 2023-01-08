@@ -31,7 +31,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <motion.main
             className="w-screen h-screen z-50"
             style={{
-              paddingTop: "90px",
               paddingBottom: "180px",
             }}
             key={router.route}
