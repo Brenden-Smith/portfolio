@@ -23,7 +23,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
           style={
             breakpoint
               ? {
-                  height: "70%",
+                  height: "100%",
+                  maxHeight: "100%",
                   paddingTop: "10px",
                   paddingBottom: "10px",
                 }
@@ -75,8 +76,13 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <CssBaseline />
       <ParticlesBackground />
       {!breakpoint && <Content />}
+      {breakpoint && (
+        <div className="top-0">
+          <Content />
+        </div>
+      )}
+
       <footer className="flex flex-col justify-center items-center fixed top-auto bottom-0 w-screen">
-        {breakpoint && <Content />}
         <AppBar />
       </footer>
     </ThemeProvider>
