@@ -35,7 +35,7 @@ export function FrostedWindowLayout({
         maxWidth: "1150px",
         width: "90vw",
         overflowY: "auto",
-        maxHeight: "fill-available",
+        maxHeight: "70vh",
       }}
     >
       <div
