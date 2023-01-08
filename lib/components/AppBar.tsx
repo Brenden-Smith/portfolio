@@ -62,7 +62,10 @@ function Item({ route, ...props }: { route: string } & ImageProps) {
         }}
       >
         <ButtonBase
-          onClick={() => router.push(`/${route}`, undefined, { shallow: true })}
+          onClick={() =>
+            router.pathname !== `/${route}` &&
+            router.push(`/${route}`, undefined, { shallow: true })
+          }
           style={{
             width: "100px",
             height: "100px",
