@@ -1,4 +1,4 @@
-import { CssBaseline } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AppBar } from "../lib/components/AppBar";
@@ -11,7 +11,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <>
+    <ThemeProvider theme={
+      createTheme({
+        palette: {
+          mode: "dark",
+        }
+      })
+    }>
       <CssBaseline />
       <div
         className="w-screen h-screen"
@@ -59,6 +65,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
         </AnimatePresence>
         <AppBar />
       </div>
-    </>
+    </ThemeProvider>
   );
 }

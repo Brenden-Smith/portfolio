@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Card, CardContent, CardHeader } from "@mui/material";
 import { FrostedWindowLayout, Icon } from "../../lib/components";
+import { DarkCard } from "../../lib/components/DarkCard";
 
 export default function Page() {
   return (
@@ -39,7 +40,7 @@ export default function Page() {
             />,
           ]}
         >
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          <DarkCard>
             <CardHeader title="Description" />
             <CardContent>
               Selected as part of 1.35% of an applicant pool of 236,000
@@ -53,7 +54,7 @@ export default function Page() {
               people in the industry. In my project, I utilized Java, Spring,
               SQL, and Amazon Web Services.
             </CardContent>
-          </Card>
+          </DarkCard>
         </FrostedWindowLayout>
       </div>
     </>

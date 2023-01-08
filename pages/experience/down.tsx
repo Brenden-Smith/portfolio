@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { Button, Card, CardContent, CardHeader } from "@mui/material";
+import { Button, CardContent, CardHeader } from "@mui/material";
 import { FrostedWindowLayout, Icon } from "../../lib/components";
+import { DarkCard } from "../../lib/components/DarkCard";
 
 export default function Page() {
   return (
@@ -40,7 +41,7 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          <DarkCard>
             <CardHeader title="Description" />
             <CardContent>
               Down is a social media startup that aims to connect users with
@@ -57,8 +58,8 @@ export default function Page() {
               development phase, and I was promoted to lead software engineer in
               December 2022 for the beta development phase.
             </CardContent>
-          </Card>
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          </DarkCard>
+          <DarkCard>
             <CardHeader title="More" />
             <CardContent>
               <Button
@@ -69,7 +70,7 @@ export default function Page() {
                 Website
               </Button>
             </CardContent>
-          </Card>
+          </DarkCard>
         </FrostedWindowLayout>
       </div>
     </>

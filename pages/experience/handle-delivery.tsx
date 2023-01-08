@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Button, Card, CardContent, CardHeader } from "@mui/material";
 import { FrostedWindowLayout, Icon } from "../../lib/components";
+import { DarkCard } from "../../lib/components/DarkCard";
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          <DarkCard>
             <CardHeader title="Description" />
             <CardContent>
               Handle Delivery is a startup based out of the University of Southern California that
@@ -34,15 +35,15 @@ export default function Page() {
               to view and manage the company{`'`}s operations, including real-time analytics, order
               management, user management, and team management.
             </CardContent>
-          </Card>
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          </DarkCard>
+          <DarkCard>
             <CardHeader title="More" />
             <CardContent>
               <Button variant="contained" href="https://handledelivery.com" target="_blank">
                 Website
               </Button>
             </CardContent>
-          </Card>
+          </DarkCard>
         </FrostedWindowLayout>
       </div>
     </>

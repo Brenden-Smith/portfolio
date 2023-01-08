@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Button, Card, CardContent, CardHeader } from "@mui/material";
 import { FrostedWindowLayout, Icon } from "../../lib/components";
+import { DarkCard } from "../../lib/components/DarkCard";
 
 export default function Page() {
   return (
@@ -48,7 +49,7 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          <DarkCard>
             <CardHeader title="Description" />
             <CardContent>
               Thumbo is a startup that aims to engage fans at sporting events by
@@ -61,8 +62,8 @@ export default function Page() {
               operations dashboards, and developed microservices to support the
               application.
             </CardContent>
-          </Card>
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          </DarkCard>
+          <DarkCard>
             <CardHeader title="More" />
             <CardContent>
               <Button
@@ -73,7 +74,7 @@ export default function Page() {
                 Website
               </Button>
             </CardContent>
-          </Card>
+          </DarkCard>
         </FrostedWindowLayout>
       </div>
     </>

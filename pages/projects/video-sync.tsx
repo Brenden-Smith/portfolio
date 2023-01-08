@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Button, Card, CardContent, CardHeader } from "@mui/material";
 import { FrostedWindowLayout, Icon } from "../../lib/components";
+import { DarkCard } from "../../lib/components/DarkCard";
 
 export default function Page() {
   return (
@@ -41,7 +42,7 @@ export default function Page() {
           ]}
           className="justify-between"
         >
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          <DarkCard>
             <CardHeader title="Description" />
             <CardContent>
               Video Sync is a personal project that I created so that I could
@@ -53,8 +54,8 @@ export default function Page() {
               <div style={{ height: "16px" }} />
               Check out the application and the repository below!
             </CardContent>
-          </Card>
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          </DarkCard>
+          <DarkCard>
             <CardHeader title="More" />
             <CardContent className="space-x-5">
               <Button
@@ -73,7 +74,7 @@ export default function Page() {
                 Repository
               </Button>
             </CardContent>
-          </Card>
+          </DarkCard>
         </FrostedWindowLayout>
       </div>
     </>

@@ -1,9 +1,10 @@
-import { Card, CardContent, CardHeader } from "@mui/material";
+import { CardContent, CardHeader } from "@mui/material";
+import { DarkCard } from "../DarkCard";
 import { Icon } from "../Icon";
 
 export default function Skills() {
   return (
-    <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+    <DarkCard>
       <CardHeader title="Skills" />
       <CardContent className="flex flex-row flex-wrap">
         <Icon src="/icon/aws.svg" size="large" alt="AWS" />
@@ -23,6 +24,6 @@ export default function Skills() {
         <Icon src="/icon/typescript.svg" size="large" alt="TypeScript" />
         <Icon src="/icon/python.svg" size="large" alt="Python" />
       </CardContent>
-    </Card>
+    </DarkCard>
   );
 }

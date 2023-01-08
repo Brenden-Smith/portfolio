@@ -11,6 +11,7 @@ import {
 import { Email, GitHub } from "@mui/icons-material";
 import { FrostedWindowLayout, Icon } from "../lib/components";
 import dynamic from "next/dynamic";
+import { DarkCard } from "../lib/components/DarkCard";
 
 export default function Page() {
   const Skills = dynamic(() => import("../lib/components/about/Skills"), {
@@ -87,7 +88,7 @@ export default function Page() {
             </IconButton>,
           ]}
         >
-          <Card className="bg-gray-400 bg-opacity-20 backdrop-blur-lg rounded-3xl text-white">
+          <DarkCard>
             <CardHeader title="About Me" />
             <CardContent>
               Hello there! My name is Brenden Smith and I am a software engineer
@@ -103,7 +104,7 @@ export default function Page() {
               <div style={{ height: "10px" }} />
               Feel free to reach out to me via email or LinkedIn!
             </CardContent>
-          </Card>
+          </DarkCard>
           <Skills />
         </FrostedWindowLayout>
       </div>
