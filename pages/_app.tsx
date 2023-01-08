@@ -17,7 +17,12 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function App({ Component, pageProps, router }: AppProps) {
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div
+      className="w-screen overflow-hidden"
+      style={{
+        height: breakpoint ? "-webkit-fill-available" : "100vh",
+      }}
+    >
       <ThemeProvider
         theme={createTheme({
           palette: {
