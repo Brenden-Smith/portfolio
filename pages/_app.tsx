@@ -15,11 +15,22 @@ import { ParticlesBackground } from "../lib/components";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function App({ Component, pageProps, router }: AppProps) {
-  function Content() {
-    return (
+  const breakpoint = useMediaQuery("(max-width: 600px)");
+  return (
+    <ThemeProvider
+      theme={createTheme({
+        palette: {
+          mode: "dark",
+        },
+      })}
+    >
+      <CssBaseline />
+      <ParticlesBackground />
       <AnimatePresence>
         <motion.main
-          className={`w-screen ${!breakpoint && "h-screen flex items-center"}`}
+          className={`w-screen ${
+            !breakpoint ? "h-screen flex items-center" : "top-0"
+          }`}
           style={
             breakpoint
               ? {
@@ -61,30 +72,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <Component {...pageProps} />
         </motion.main>
       </AnimatePresence>
-    );
-  }
 
-  const breakpoint = useMediaQuery("(max-width: 600px)");
-  return (
-    <ThemeProvider
-      theme={createTheme({
-        palette: {
-          mode: "dark",
-        },
-      })}
-    >
-      <CssBaseline />
-      <ParticlesBackground />
-      {!breakpoint && <Content />}
-      {breakpoint && (
-        <div className="top-0">
-          <Content />
-        </div>
-      )}
-
-      <footer className="flex flex-col justify-center items-center fixed top-auto bottom-0 w-screen">
-        <AppBar />
-      </footer>
+      <AppBar />
     </ThemeProvider>
   );
 }
