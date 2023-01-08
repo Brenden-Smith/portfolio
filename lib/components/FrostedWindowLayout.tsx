@@ -9,6 +9,7 @@ export function FrostedWindowLayout({
   startDate,
   endDate,
   image,
+  imageColor,
   children,
   tags,
   className,
@@ -19,6 +20,7 @@ export function FrostedWindowLayout({
   startDate?: string;
   endDate?: string;
   image: string;
+  imageColor?: string;
   tags: ReactNode[];
   className?: string;
 
@@ -36,14 +38,26 @@ export function FrostedWindowLayout({
         overflowY: "auto",
       }}
     >
-      <div className="flex flex-col items-center space-y-5 p-5">
-        <Image
-          src={image}
-          alt={title}
-          height={250}
-          width={250}
+      <div
+        className="flex flex-col items-center space-y-5 p-5"
+        style={{
+          width: breakpoint ? "100%" : "35%",
+        }}
+      >
+        <div
           className="rounded-3xl"
-        />
+          style={{
+            backgroundColor: imageColor || "transparent",
+          }}
+        >
+          <Image
+            src={image}
+            alt={title}
+            height={250}
+            width={250}
+            className="rounded-3xl"
+          />
+        </div>
         <Typography variant="h3" noWrap>
           {title}
         </Typography>
@@ -61,9 +75,10 @@ export function FrostedWindowLayout({
         <Divider orientation="vertical" flexItem className="mr-5 ml-3" />
       )}
       <div
-        className={`flex flex-col space-y-5 p-5 h-auto ${
-          className || ""
-        }`}
+        className={`flex flex-col space-y-5 p-5 h-auto ${className || ""}`}
+        style={{
+          width: breakpoint ? "100%" : "65%",
+        }}
         {...props}
       >
         {children}

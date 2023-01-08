@@ -31,12 +31,6 @@ export default function Page() {
               key="java"
             />,
             <Icon
-              src="/icon/spring.svg"
-              size="large"
-              alt="Spring"
-              key="spring"
-            />,
-            <Icon
               noStyle
               src="/icon/sql.svg"
               size="medium"
@@ -54,7 +48,7 @@ export default function Page() {
               team in the Global Markets division. I worked on project that
               directly benefited the team and the company as a whole, and I was
               able to learn a lot about the company and the industry as a whole.
-              I was also able to learn a lot about the company's culture and
+              I was also able to learn a lot about the company{`'`}s culture and
               values, and I was able to work with some of the most talented
               people in the industry. In my project, I utilized Java, Spring,
               SQL, and Amazon Web Services.

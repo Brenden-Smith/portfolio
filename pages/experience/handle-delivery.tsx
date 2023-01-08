@@ -28,10 +28,10 @@ export default function Page() {
               Handle Delivery is a startup based out of the University of Southern California that
               provides snack delivery services to students on college campuses. I am currently
               working as a software engineer on the team, and I am responsible for developing
-              the company's back-end infrastructure on Google Cloud and administrative/operations tools.
+              the company{`'`} back-end infrastructure on Google Cloud and administrative/operations tools.
               <div style={{ height: "16px" }} />
               I am currently working on a dashboard that allows the company and campus managers
-              to view and manage the company's operations, including real-time analytics, order
+              to view and manage the company{`'`}s operations, including real-time analytics, order
               management, user management, and team management.
             </CardContent>
           </Card>
