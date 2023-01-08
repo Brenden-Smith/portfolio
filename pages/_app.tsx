@@ -72,7 +72,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <Component {...pageProps} />
         </motion.main>
       </AnimatePresence>
-
       <AppBar />
     </ThemeProvider>
   );
