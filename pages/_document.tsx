@@ -10,7 +10,7 @@ export default function Document() {
         <meta name="og:title" content="Brenden Smith | Software Engineer" />
         <meta
           name="og:description"
-          content="Brenden Smith | Software Engineer"
+          content="The portfolio of Brenden Smith"
         />
         <meta
           name="og:image"
