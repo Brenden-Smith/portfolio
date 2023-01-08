@@ -11,13 +11,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <ThemeProvider theme={
-      createTheme({
+    <ThemeProvider
+      theme={createTheme({
         palette: {
           mode: "dark",
-        }
-      })
-    }>
+        },
+      })}
+    >
       <CssBaseline />
       <div
         className="w-screen h-screen overflow-hidden"
@@ -29,8 +29,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <ParticlesBackground />
         <AnimatePresence>
           <motion.main
-            className="absolute w-screen h-screen z-50"
+            className="z-50 w-full"
             style={{
+              height: "-webkit-fill-available",
               paddingBottom: "180px",
             }}
             key={router.route}
