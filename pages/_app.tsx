@@ -27,7 +27,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           style={
             breakpoint ? {
               height: "-webkit-fill-available",
-              paddingTop: "15px",
+              paddingTop: "5px",
             } : {
               paddingBottom: "180px"
             }
