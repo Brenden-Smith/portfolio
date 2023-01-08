@@ -49,7 +49,9 @@ export function ParticlesBackground() {
   };
 
   return (
-    <div className="absolute blur-md h-screen w-screen z-0">
+    <div className="absolute blur-md h-screen w-screen z-0" style={{
+      background: "linear-gradient(45deg, #d45b79 30%, #e67a4e 90%)"
+    }}>
       <Particles id="tsparticles" init={particlesInit} options={options} />
     </div>
   );
