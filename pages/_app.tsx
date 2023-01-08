@@ -23,7 +23,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <ParticlesBackground />
       <AnimatePresence>
         <motion.main
-          className={`flex items-center w-screen ${!breakpoint && "h-screen"}`}
+          className={`w-screen ${!breakpoint && "h-screen flex items-center"}`}
           style={
             breakpoint ? {
               height: "-webkit-fill-available",
