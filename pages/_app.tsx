@@ -25,7 +25,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
               ? {
                   height: "70%",
                   paddingTop: "10px",
-                  paddingBottom: "30px",
+                  paddingBottom: "10px",
                 }
               : {
                   paddingBottom: "180px",
