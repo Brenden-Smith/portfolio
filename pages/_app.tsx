@@ -20,7 +20,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     }>
       <CssBaseline />
       <div
-        className="w-screen h-screen"
+        className="w-screen h-screen overflow-hidden"
         style={{
           background: "linear-gradient(45deg, #d45b79 30%, #e67a4e 90%)",
           paddingBottom: "192px",
@@ -29,7 +29,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <ParticlesBackground />
         <AnimatePresence>
           <motion.main
-            className="w-screen h-screen z-50"
+            className="absolute w-screen h-screen z-50"
             style={{
               paddingBottom: "180px",
             }}
