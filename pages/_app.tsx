@@ -20,7 +20,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
   useEffect(() => {
     setHeight(window?.innerHeight);
-  }, [window]);
+  }, []);
 
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
