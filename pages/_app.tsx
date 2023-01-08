@@ -1,4 +1,9 @@
-import { createTheme, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import {
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+  useMediaQuery,
+} from "@mui/material";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { AppBar } from "../lib/components/AppBar";
@@ -12,56 +17,62 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function App({ Component, pageProps, router }: AppProps) {
   const breakpoint = useMediaQuery("(max-width: 600px)");
   return (
-    <ThemeProvider
-      theme={createTheme({
-        palette: {
-          mode: "dark",
-        },
-      })}
-    >
-      <CssBaseline />
-      <ParticlesBackground />
-      <AnimatePresence>
-        <motion.main
-          className={`w-screen ${!breakpoint && "h-screen flex items-center"}`}
-          style={
-            breakpoint ? {
-              height: "-webkit-fill-available",
-              paddingTop: "5px",
-            } : {
-              paddingBottom: "180px"
+    <div className="w-screen h-screen overflow-hidden">
+      <ThemeProvider
+        theme={createTheme({
+          palette: {
+            mode: "dark",
+          },
+        })}
+      >
+        <CssBaseline />
+        <ParticlesBackground />
+        <AnimatePresence>
+          <motion.main
+            className={`w-screen ${
+              !breakpoint && "h-screen flex items-center"
+            }`}
+            style={
+              breakpoint
+                ? {
+                    height: "-webkit-fill-available",
+                    paddingTop: "5px",
+                  }
+                : {
+                    paddingBottom: "180px",
+                  }
             }
-          }
-          key={router.route}
-          initial="pageInitial"
-          animate="pageAnimate"
-          exit="pageExit"
-          variants={{
-            pageInitial: {
-              opacity: 0,
-              scale: 0.5,
-            },
-            pageAnimate: {
-              opacity: 1,
-              scale: 1,
-              transition: {
-                delay: 0.4,
-                duration: 0.3,
+            key={router.route}
+            initial="pageInitial"
+            animate="pageAnimate"
+            exit="pageExit"
+            variants={{
+              pageInitial: {
+                opacity: 0,
+                scale: 0.5,
               },
-            },
-            pageExit: {
-              opacity: 0,
-              transition: {
-                duration: 0.4,
+              pageAnimate: {
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  delay: 0.4,
+                  duration: 0.3,
+                },
               },
-              scale: 1,
-            },
-          }}
-        >
-          <Component {...pageProps} />
-        </motion.main>
-      </AnimatePresence>
-      <AppBar />
-    </ThemeProvider>
+              pageExit: {
+                opacity: 0,
+                transition: {
+                  duration: 0.4,
+                },
+                scale: 1,
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.main>
+        </AnimatePresence>
+        <AppBar />
+      </ThemeProvider>
+    </div>
   );
 }
