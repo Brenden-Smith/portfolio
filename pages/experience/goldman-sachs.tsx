@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Card, CardContent, CardHeader } from "@mui/material";
+import { CardContent } from "@mui/material";
 import { FrostedWindowLayout, Icon } from "../../lib/components";
 import { DarkCard } from "../../lib/components/DarkCard";
 
