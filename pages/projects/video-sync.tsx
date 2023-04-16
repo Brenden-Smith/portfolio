@@ -13,7 +13,7 @@ export default function Page() {
         <FrostedWindowLayout
           title="Video Sync"
           position="Personal Project"
-          image="/img/video.jpg"
+          image="/img/video.png"
           imageColor="black"
           startDate="January 2022"
           endDate="Present"
@@ -31,6 +31,13 @@ export default function Page() {
               size="medium"
               alt="JavaScript"
               key="js"
+            />,
+            <Icon
+              noStyle
+              src="/icon/react.svg"
+              size="medium"
+              alt="React"
+              key="react"
             />,
             <Icon
               noStyle

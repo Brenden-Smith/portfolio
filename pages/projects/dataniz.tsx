@@ -7,31 +7,17 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Brenden Smith | Thumbo</title>
+        <title>Brenden Smith | Dataniz</title>
       </Head>
       <div className="flex items-center justify-center w-full h-full">
         <FrostedWindowLayout
-          title="Thumbo"
-          position="Freelance Software Engineer"
-          image="/img/thumbo.png"
+          title="Dataniz"
+          position="Freelance Software Engineering"
+          image="/img/dataniz.png"
           imageColor="black"
-          startDate="May 2022"
-          endDate="November 2022"
+          startDate="January 2023"
+          endDate="Present"
           tags={[
-            <Icon
-              noStyle
-              src="/icon/aws.svg"
-              size="medium"
-              alt="AWS"
-              key="aws"
-            />,
-            <Icon
-              noStyle
-              src="/icon/gcloud.svg"
-              size="medium"
-              alt="Google Cloud"
-              key="gcloud"
-            />,
             <Icon
               noStyle
               src="/icon/javascript.svg"
@@ -58,28 +44,34 @@ export default function Page() {
         >
           <DarkCard title="Description">
             <CardContent>
-              Thumbo is a startup that aims to engage fans at sporting events by
-              providing mid-game activities for prizes. I worked with another
-              engineer to design the alpha version of the application. I was
-              responsible for the development of the back-end and cloud
-              infrastructure for the alpha development phase. I designed all of
-              the logic for the games, implemented cloud features from AWS and
-              Google Cloud, managed the database, created the administrative and
-              operations dashboards, and developed microservices to support the
-              application.
+              Dataniz is a website that allows users to generate IoT data.
+              <div style={{ height: "16px" }} />
+              I developed the middle end of the application, primarily working with the back end
+              team to integrate an existing REST API into the front end with performance, efficiency,
+              security, and cost in mind. I also developed the authentication flow on the front end, and
+              worked with the design and front end teams to create a clean and intuitive user interface that complements
+              the back end.
             </CardContent>
           </DarkCard>
-          <DarkCard title="More">
-            <CardContent>
+          {/* <DarkCard title="More">
+            <CardContent className="space-x-5">
               <Button
                 variant="contained"
-                href="https://thumbo.app"
+                href="https://www.foodood.dev"
                 target="_blank"
               >
                 Website
               </Button>
+
+              <Button
+                variant="contained"
+                href="https://github.com/Brenden-Smith/foodood"
+                target="_blank"
+              >
+                Repository
+              </Button>
             </CardContent>
-          </DarkCard>
+          </DarkCard> */}
         </FrostedWindowLayout>
       </div>
     </>

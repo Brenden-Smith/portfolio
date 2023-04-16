@@ -7,24 +7,17 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Brenden Smith | Thumbo</title>
+        <title>Brenden Smith | FooDood</title>
       </Head>
       <div className="flex items-center justify-center w-full h-full">
         <FrostedWindowLayout
-          title="Thumbo"
-          position="Freelance Software Engineer"
-          image="/img/thumbo.png"
+          title="Shift"
+          position="Freelance Software Engineering"
+          image="/img/shift.png"
           imageColor="black"
-          startDate="May 2022"
-          endDate="November 2022"
+          startDate="March 2023"
+          endDate="Present"
           tags={[
-            <Icon
-              noStyle
-              src="/icon/aws.svg"
-              size="medium"
-              alt="AWS"
-              key="aws"
-            />,
             <Icon
               noStyle
               src="/icon/gcloud.svg"
@@ -43,7 +36,7 @@ export default function Page() {
               noStyle
               src="/icon/react.svg"
               size="medium"
-              alt="React"
+              alt="React / React Native"
               key="react"
             />,
             <Icon
@@ -58,25 +51,26 @@ export default function Page() {
         >
           <DarkCard title="Description">
             <CardContent>
-              Thumbo is a startup that aims to engage fans at sporting events by
-              providing mid-game activities for prizes. I worked with another
-              engineer to design the alpha version of the application. I was
-              responsible for the development of the back-end and cloud
-              infrastructure for the alpha development phase. I designed all of
-              the logic for the games, implemented cloud features from AWS and
-              Google Cloud, managed the database, created the administrative and
-              operations dashboards, and developed microservices to support the
-              application.
+              Shift is a free and open source web and mobile application that allows
+              ambulance companies to manage their employees and schedule shifts. This project
+              was created to address the need for a modern and intuitive interface that scales
+              with the needs of the company.
+              <div style={{ height: "16px" }} />
+              I am working on this project as a freelance software engineer for a local
+              ambulance company. I am responsible for the design, development, and deployment
+              of the application.
+              <div style={{ height: "16px" }} />
+              Check out the repository below to see the code for this project.
             </CardContent>
           </DarkCard>
           <DarkCard title="More">
-            <CardContent>
+            <CardContent className="space-x-5">
               <Button
                 variant="contained"
-                href="https://thumbo.app"
+                href="https://github.com/Brenden-Smith/shift"
                 target="_blank"
               >
-                Website
+                Repository
               </Button>
             </CardContent>
           </DarkCard>

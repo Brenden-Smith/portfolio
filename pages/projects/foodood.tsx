@@ -7,24 +7,17 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Brenden Smith | Thumbo</title>
+        <title>Brenden Smith | FooDood</title>
       </Head>
       <div className="flex items-center justify-center w-full h-full">
         <FrostedWindowLayout
-          title="Thumbo"
-          position="Freelance Software Engineer"
-          image="/img/thumbo.png"
+          title="FooDood"
+          position="CSULB Senior Project"
+          image="/img/foodood.png"
           imageColor="black"
-          startDate="May 2022"
-          endDate="November 2022"
+          startDate="August 2022"
+          endDate="May 2023"
           tags={[
-            <Icon
-              noStyle
-              src="/icon/aws.svg"
-              size="medium"
-              alt="AWS"
-              key="aws"
-            />,
             <Icon
               noStyle
               src="/icon/gcloud.svg"
@@ -43,7 +36,7 @@ export default function Page() {
               noStyle
               src="/icon/react.svg"
               size="medium"
-              alt="React"
+              alt="React Native"
               key="react"
             />,
             <Icon
@@ -58,25 +51,39 @@ export default function Page() {
         >
           <DarkCard title="Description">
             <CardContent>
-              Thumbo is a startup that aims to engage fans at sporting events by
-              providing mid-game activities for prizes. I worked with another
-              engineer to design the alpha version of the application. I was
-              responsible for the development of the back-end and cloud
-              infrastructure for the alpha development phase. I designed all of
-              the logic for the games, implemented cloud features from AWS and
-              Google Cloud, managed the database, created the administrative and
-              operations dashboards, and developed microservices to support the
-              application.
+              FooDood is a mobile application that combines the concept of
+              Tinder-swiping with selecting something to eat. Science says that
+              it is easier to make a decision when presented with simple options
+              such as "yes" or "no" rather than a large list of options. FooDood
+              will present users with a list of food options in their area and
+              they will be able to swipe left or right on the options to decide
+              what to eat.
+              <div style={{ height: "16px" }} />
+              I worked on this project with a team of 3 other students. I
+              developed the back end of the application primarily, including the
+              recommendation algorithm, data fetching, and cloud resources. On
+              the front end, I worked on performance optimizations and efficient
+              data fetching.
+              <div style={{ height: "16px" }} />
+              Check out the website and repository below!
             </CardContent>
           </DarkCard>
           <DarkCard title="More">
-            <CardContent>
+            <CardContent className="space-x-5">
               <Button
                 variant="contained"
-                href="https://thumbo.app"
+                href="https://www.foodood.dev"
                 target="_blank"
               >
                 Website
+              </Button>
+
+              <Button
+                variant="contained"
+                href="https://github.com/Brenden-Smith/foodood"
+                target="_blank"
+              >
+                Repository
               </Button>
             </CardContent>
           </DarkCard>
