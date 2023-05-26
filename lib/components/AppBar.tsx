@@ -38,8 +38,10 @@ export function AppBar() {
           alt="Goldman Sachs"
           route="experience/goldman-sachs"
         />
-        <Item src="/img/down.jpg" alt="Down" route="experience/down" />
         <Divider orientation="vertical" flexItem />
+        <Item src="/img/shift.png" alt="Shift" route="projects/shift" />
+        <Item src="/img/foodood.png" alt="FooDood" route="projects/foodood" />
+        <Item src="/img/dataniz.png" alt="Dataniz" route="projects/dataniz" />
         <Item
           src="/img/thumbo.png"
           alt="Thumbo"
@@ -47,10 +49,11 @@ export function AppBar() {
           route="projects/thumbo"
         />
         <Item
-          src="/img/video.jpg"
+          src="/img/video.png"
           alt="Video Sync"
           route="projects/video-sync"
         />
+        <Item src="/img/down.jpg" alt="Down" route="projects/down" />
       </FrostedWindow>
     </footer>
   );

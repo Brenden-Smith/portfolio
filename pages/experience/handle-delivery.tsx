@@ -33,6 +33,13 @@ export default function Page() {
             />,
             <Icon
               noStyle
+              src="/icon/react.svg"
+              size="medium"
+              alt="React / React Native"
+              key="react"
+            />,
+            <Icon
+              noStyle
               src="/icon/typescript.svg"
               size="medium"
               alt="TypeScript"
@@ -45,14 +52,18 @@ export default function Page() {
             <CardContent>
               Handle Delivery is a startup based out of the University of
               Southern California that provides snack delivery services to
-              students on college campuses. I am currently working as a software
-              engineer on the team, and I am responsible for developing the
-              company{`'`} back-end infrastructure on Google Cloud and
-              administrative/operations tools.
-              <div style={{ height: "16px" }} />I am currently working on a
-              dashboard that allows the company and campus managers to view and
-              manage the company{`'`}s operations, including real-time
-              analytics, order management, user management, and team management.
+              students on college campuses across the country . I am currently
+              working as a software engineer on the team, and I am responsible
+              for developing the company{`'`} back-end infrastructure on Google
+              Cloud and administrative/operations tools.
+              <div style={{ height: "16px" }} />I developed a dashboard that
+              allows the company and campus managers to view and manage the
+              company{`'`}s operations, including real-time analytics, order
+              management, user management, and team management.
+              <div style={{ height: "16px" }} />
+              Additionally, I rebuilt the customer application, not including
+              the design, from the ground up to provide a more performant and
+              responsive experience, increasing customer retention by 20%.
             </CardContent>
           </DarkCard>
           <DarkCard title="More">
