@@ -91,15 +91,15 @@ export default function Page() {
           <DarkCard title="About Me">
             <CardContent>
               Hello there! My name is Brenden Smith and I am a software engineer
-              based in the United States. I am currently a <b>senior</b> at{" "}
-              <b>California State University, Long Beach</b>, where I am
-              pursuing a <b>Bachelor{`'`}s of Science</b> in{" "}
-              <b>Computer Science</b>. I am also a <b>Software Engineer</b> at{" "}
-              <b>Handle Delivery</b> where I develop and maintain administrative
-              and back-end resources to support the company
+              based in the United States. I am currently a{" "}
+              <b>Software Engineer</b> at <b>Handle Delivery</b> where I develop
+              and maintain administrative and back-end resources to support the
+              company
               {`'`}s operations. Formerly, I was a{" "}
               <b>Software Engineer Intern</b> at <b>Goldman Sachs</b>, where I
-              worked on the RIA Engineering team.
+              worked on the RIA Engineering team. I received my{" "}
+              <b>Bachelor{`'`}s of Science</b> in <b>Computer Science</b> from{" "}
+              <b>California State University, Long Beach</b> in May 2023.
               <div style={{ height: "10px" }} />
               Feel free to reach out to me via email or LinkedIn!
             </CardContent>
