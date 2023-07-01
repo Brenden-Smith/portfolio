@@ -4,12 +4,14 @@ import { FrostedWindowLayout } from "../components/FrostedWindowLayout";
 import Skills from "./Skills";
 import siteMetadata from "metadata";
 import { Metadata } from "next";
+import IconButton from "components/IconButton";
+import Tooltip from "components/Tooltip";
+import { Icon } from "components/Icon";
 
 export const metadata: Metadata = {
   ...siteMetadata,
   title: "Brenden Smith",
 };
-
 
 export default function Page() {
   return (
@@ -19,68 +21,42 @@ export default function Page() {
       </Head>
       <div className="flex items-center justify-center w-full h-full">
         <FrostedWindowLayout
-          tags={[]}
           title="Brenden Smith"
           position="Software Engineer"
           image="https://avatars.githubusercontent.com/u/61305154?v=4"
-          // tags={[
-          //   <IconButton
-          //     sx={{
-          //       color: "white",
-          //     }}
-          //     href="mailto:contact@brenden-smith.com"
-          //     target="_blank"
-          //     key="email"
-          //   >
-          //     <Tooltip
-          //       title={<Typography>Email</Typography>}
-          //       placement="top"
-          //       arrow
-          //     >
-          //       <Email
-          //         sx={{
-          //           fontSize: "3rem",
-          //         }}
-          //       />
-          //     </Tooltip>
-          //   </IconButton>,
-          //   <IconButton
-          //     sx={{
-          //       color: "white",
-          //     }}
-          //     href="https://www.linkedin.com/in/brenden-s-smith"
-          //     target="_blank"
-          //     key="linkedin"
-          //   >
-          //     <Icon
-          //       src="/icon/linkedin.svg"
-          //       size="medium"
-          //       alt="LinkedIn"
-          //       noStyle
-          //     />
-          //   </IconButton>,
-          //   <IconButton
-          //     sx={{
-          //       color: "white",
-          //     }}
-          //     href="https://github.com/Brenden-Smith"
-          //     target="_blank"
-          //     key="github"
-          //   >
-          //     <Tooltip
-          //       title={<Typography>GitHub</Typography>}
-          //       placement="top"
-          //       arrow
-          //     >
-          //       <GitHub
-          //         fontSize="large"
-          //         sx={{
-          //           fontSize: "3rem",
-          //         }}
-          //       />
-          //     </Tooltip>
-          //   </IconButton>,
-          // ]}
+          tags={[
+            <IconButton
+              href="mailto:contact@brenden-smith.com"
+              key="email"
+              icon={{
+                src: "/icon/email.svg",
+                size: "medium",
+                alt: "Email",
+                color: "white",
+                noStyle: true,
+              }}
+            />,
+            <IconButton
+              href="https://www.linkedin.com/in/brenden-s-smith"
+              key="linkedin"
+              icon={{
+                src: "/icon/linkedin.svg",
+                size: "medium",
+                alt: "LinkedIn",
+                noStyle: true,
+              }}
+            />,
+            <IconButton
+              href="https://github.com/Brenden-Smith"
+              key="github"
+              icon={{
+                src: "/icon/github.svg",
+                size: "medium",
+                alt: "GitHub",
+                noStyle: true,
+              }}
+            />,
+          ]}
         >
           <DarkCard title="About Me">
             <p>
