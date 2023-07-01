@@ -4,10 +4,9 @@ import "./globals.css";
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import { Roboto } from "next/font/google";
-import Motion from "components/Motion";
-import { Suspense, memo } from "react";
-import Loading from "./loading";
+import { memo } from "react";
 import Tooltip from "components/Tooltip";
+import Providers from "./providers";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -27,9 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }}
       >
         <main className="flex relative justify-center items-center w-full h-full pb-32">
-          <Suspense fallback={<Loading />}>
-            <Motion>{children}</Motion>
-          </Suspense>
+          <Providers>{children}</Providers>
         </main>
         <footer className="flex fixed items-end justify-center top-auto bottom-0 w-screen h-screen z-0">
           <FrostedWindow

@@ -1,4 +1,6 @@
-export default function Divider({
+import { memo } from "react";
+
+export default memo(function Divider({
   className,
   style,
 }: {
@@ -8,4 +10,4 @@ export default function Divider({
   return (
     <div className={`bg-gray-400 w-0.5 ${className ?? "h-24"}`} style={style} />
   );
-}
+});

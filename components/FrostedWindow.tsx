@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode, memo } from "react";
 
-export function FrostedWindow({
+const FrostedWindow = memo(function FrostedWindow({
   children,
   className,
   ...props
@@ -19,6 +19,6 @@ export function FrostedWindow({
       {children}
     </div>
   );
-}
+});
 
 export default FrostedWindow;

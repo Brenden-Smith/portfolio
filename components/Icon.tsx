@@ -1,7 +1,8 @@
 import Image, { ImageProps } from "next/image";
 import Tooltip from "./Tooltip";
+import { memo } from "react";
 
-export function Icon({
+const Icon = memo(function Icon({
   src,
   size,
   noStyle,
@@ -24,4 +25,6 @@ export function Icon({
       </Tooltip>
     </div>
   );
-}
+});
+
+export { Icon };
