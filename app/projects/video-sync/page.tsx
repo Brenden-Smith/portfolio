@@ -74,7 +74,7 @@ export default function Page() {
               Application
             </Button>
 
-            <Button href="https://videosync.brenden-smith.com">
+            <Button href="https://github.com/Brenden-Smith/video-sync">
               Repository
             </Button>
           </div>
