@@ -13,11 +13,14 @@ export default function Page() {
   return (
     <FrostedWindowLayout
       title="Dataniz"
-      position="Freelance Software Engineering"
+      items={[
+        {
+          position: "Software Engineer",
+          startDate: "January 2023",
+          endDate: "May 2023",
+        },
+      ]}
       image="/img/dataniz.png"
-      imageColor="black"
-      startDate="January 2023"
-      endDate="Present"
       tags={[
         <Icon
           noStyle

@@ -51,14 +51,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
               <Divider />
               <Item
-                src="/img/handle.jpg"
-                alt="Handle Delivery"
-                route="/experience/handle-delivery"
-              />
-              <Item
                 src="/img/goldman.png"
                 alt="Goldman Sachs"
                 route="/experience/goldman-sachs"
+              />
+              <Item
+                src="/img/handle.jpg"
+                alt="Handle Delivery"
+                route="/experience/handle-delivery"
               />
               <Divider />
               <Item src="/img/shift.png" alt="Shift" route="/projects/shift" />

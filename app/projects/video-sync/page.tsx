@@ -15,11 +15,15 @@ export default function Page() {
     <div className="flex items-center justify-center w-full h-full">
       <FrostedWindowLayout
         title="Video Sync"
-        position="Personal Project"
+        items={[
+          {
+            position: "Personal Project",
+            startDate: "January 2022",
+            endDate: "Present",
+          },
+        ]}
         image="/img/video.png"
         imageColor="black"
-        startDate="January 2022"
-        endDate="Present"
         tags={[
           <Icon
             noStyle

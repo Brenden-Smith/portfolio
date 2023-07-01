@@ -15,11 +15,15 @@ export default function Page() {
     <div className="flex items-center justify-center w-full h-full">
       <FrostedWindowLayout
         title="Thumbo"
-        position="Freelance Software Engineer"
+        items={[
+          {
+            position: "Freelance Software Engineer",
+            startDate: "May 2022",
+            endDate: "November 2022",
+          },
+        ]}
         image="/img/thumbo.png"
         imageColor="black"
-        startDate="May 2022"
-        endDate="November 2022"
         tags={[
           <Icon
             noStyle

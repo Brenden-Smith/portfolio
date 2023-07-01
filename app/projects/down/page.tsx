@@ -10,16 +10,24 @@ export const metadata: Metadata = {
   title: "Brenden Smith | Down",
 };
 
-
 export default function Page() {
   return (
     <div className="flex items-center justify-center w-full h-full">
       <FrostedWindowLayout
         title="Down"
-        position="Lead Software Engineer"
+        items={[
+          {
+            position: "Lead Software Engineer",
+            startDate: "December 2021",
+            endDate: "January 2022",
+          },
+          {
+            position: "Software Engineering Intern",
+            startDate: "June 2021",
+            endDate: "August 2021",
+          },
+        ]}
         image="/img/down.jpg"
-        startDate="June 2021"
-        endDate="January 2022"
         tags={[
           <Icon
             noStyle
@@ -46,6 +54,7 @@ export default function Page() {
         className="justify-between"
       >
         <DarkCard title="Description">
+          <h4>Lead Software Engineer</h4>
           <p>
             Down is a social media startup that aims to connect users with
             events going on in their area. I was responsible for the development
@@ -57,7 +66,7 @@ export default function Page() {
             authentication, and databases using Google Cloud to be implemented
             in the mobile application.
           </p>
-
+          <h4>Software Engineering Intern</h4>
           <p>
             I started out on the team as a front-end software engineering intern
             in June 2021 for the alpha development phase, and I was promoted to

@@ -6,9 +6,7 @@ import { m } from "framer-motion";
 
 const FrostedWindowLayout = memo(function FrostedWindowLayout({
   title,
-  position,
-  startDate,
-  endDate,
+  items,
   image,
   imageColor,
   children,
@@ -17,9 +15,11 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
   ...props
 }: {
   title: string;
-  position: string;
-  startDate?: string;
-  endDate?: string;
+  items: {
+    position: string;
+    startDate?: string;
+    endDate?: string;
+  }[];
   image: string;
   imageColor?: string;
   tags: ReactNode[];
@@ -41,7 +41,7 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
           maxWidth: "1150px",
           width: "90vw",
           overflowY: "auto",
-          maxHeight: "70vh",
+          maxHeight: "75vh",
         }}
       >
         <div className="flex flex-col items-center space-y-5 p-5 text-center">
@@ -61,13 +61,18 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
               />
             </div>
           </div>
+
           <h2>{title}</h2>
-          <h4>{position}</h4>
-          {startDate && endDate && (
-            <p>
-              {startDate} - {endDate}
-            </p>
-          )}
+          {items.map(({ position, startDate, endDate }) => (
+            <>
+              <h4>{position}</h4>
+              {startDate && endDate && (
+                <p>
+                  {startDate} - {endDate}
+                </p>
+              )}
+            </>
+          ))}
           <div className="flex flex-row space-x-5">{tags}</div>
         </div>
         <div

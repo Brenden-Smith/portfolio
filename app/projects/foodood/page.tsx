@@ -10,17 +10,20 @@ export const metadata: Metadata = {
   title: "Brenden Smith | FooDood",
 };
 
-
 export default function Page() {
   return (
     <div className="flex items-center justify-center w-full h-full">
       <FrostedWindowLayout
         title="FooDood"
-        position="CSULB Senior Project"
+        items={[
+          {
+            position: "CSULB Senior Project",
+            startDate: "August 2022",
+            endDate: "May 2023",
+          },
+        ]}
         image="/img/foodood.png"
         imageColor="black"
-        startDate="August 2022"
-        endDate="May 2023"
         tags={[
           <Icon
             noStyle
