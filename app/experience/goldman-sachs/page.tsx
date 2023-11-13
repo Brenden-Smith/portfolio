@@ -18,7 +18,7 @@ export default function Page() {
           {
             position: "Analyst Software Engineer",
             startDate: "July 2023",
-            endDate: "Present",
+            endDate: "October 2023",
           },
           {
             position: "Software Engineer Intern",
@@ -42,6 +42,7 @@ export default function Page() {
             alt="Java"
             key="java"
           />,
+          <Icon src="/icon/react.svg" size="large" alt="React" />,
           <Icon
             noStyle
             src="/icon/sql.svg"
@@ -53,7 +54,13 @@ export default function Page() {
       >
         <DarkCard title="Description">
           <h4>Analyst Software Engineer</h4>
-          <p>Working as a full-time software engineer at the company.</p>
+          <p>
+            Developed enterprise-grade financial tools using scalable Java-based
+            microservices hosted on AWS, complemented by intuitive front ends
+            crafted with React. Contributed to the migration of legacy systems
+            to cloud infrastructure, aiming to enhance scalability and
+            streamline operational costs.
+          </p>
           <h4>Software Engineering Intern</h4>
           <p>
             Selected as part of 1.35% of an applicant pool of 236,000 candidates
