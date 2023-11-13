@@ -69,10 +69,10 @@ export default function Page() {
           </p>
           <h4>Work</h4>
           <p>
-            Currently, I am a <b>Analyst Software Engineer</b> at Goldman Sachs.
+            Currently, I am a <b>Software Engineer</b> at ICF.
           </p>
           <p>
-            Formerly, I was a <b>Software Engineer</b> at <b>Handle Delivery</b>{" "}
+            Formerly, I was an <b>Analyst Software Engineer</b> at Goldman Sachs, where I built enterprise grade financial applications with AWS, Java, and React, and a <b>Software Engineer</b> at <b>Handle Delivery</b>{" "}
             where I developed and maintained administrative and back-end
             resources to support the company
             {`'`}s operations.

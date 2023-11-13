@@ -51,6 +51,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
               <Divider />
               <Item
+                src="/img/icf.png"
+                alt="ICF"
+                route="/experience/icf"
+                className="bg-white"
+              />
+              <Item
                 src="/img/goldman.png"
                 alt="Goldman Sachs"
                 route="/experience/goldman-sachs"
@@ -103,9 +109,8 @@ const Item = memo(function Item({
           <Image
             {...props}
             alt={props.alt}
-            width={100}
-            height={100}
-            className={`rounded-3xl ${props.className}`}
+            className={`object-contain rounded-3xl ${props.className}`}
+            fill
           />
         </div>
       </Link>

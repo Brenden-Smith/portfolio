@@ -56,7 +56,7 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
                 src={image}
                 alt={title}
                 fill
-                className="rounded-3xl"
+                className="rounded-3xl object-contain"
                 priority
               />
             </div>
