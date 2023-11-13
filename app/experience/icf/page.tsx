@@ -31,13 +31,13 @@ export default function Page() {
             alt="AWS"
             key="aws"
           />,
-          <Icon src="/icon/react.svg" size="large" alt="React" />,
+          <Icon src="/icon/react.svg" size="large" alt="React" key="react" />,
         ]}
       >
         <DarkCard title="Description">
           <p>
-            Developing a modern experience for the National Youth in
-            Transition Database with Next.js, React, and AWS.
+            Developing a modern experience for the National Youth in Transition
+            Database with Next.js, React, and AWS.
           </p>
         </DarkCard>
       </FrostedWindowLayout>

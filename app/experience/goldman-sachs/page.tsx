@@ -42,7 +42,7 @@ export default function Page() {
             alt="Java"
             key="java"
           />,
-          <Icon src="/icon/react.svg" size="large" alt="React" />,
+          <Icon src="/icon/react.svg" size="large" alt="React" key="react" />,
           <Icon
             noStyle
             src="/icon/sql.svg"
