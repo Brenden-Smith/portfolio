@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             }}
           >
             <div
-              className="top-0 flex flex-row space-x-5 overflow-x-scroll items-end -translate-y-1/3 pb-2"
+              className="top-0 flex flex-row space-x-5 overflow-x-auto items-end -translate-y-1/3 pb-2"
               style={{
                 height: "150px",
               }}
