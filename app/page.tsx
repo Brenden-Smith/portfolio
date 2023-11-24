@@ -69,15 +69,18 @@ export default function Page() {
           </p>
           <h4>Work</h4>
           <p>
-            Currently, I am a <b>Software Engineer</b> at ICF.
+            Currently, I am a full time<b>React Developer</b> at ICF, where I am
+            developing a modernized experience for the National Youth in
+            Transition Database. Additionally, I am a <b>Software Engineer</b>{" "}
+            at <b>Handle Delivery</b> where I develop and maintain back-end
+            resources to support the company
+            {`'`}s operations, as well as the customer mobile application,
+            employee mobile application, and administrative web application.
           </p>
           <p>
             Formerly, I was an <b>Analyst Software Engineer</b> at Goldman
             Sachs, where I built enterprise grade financial applications with
-            AWS, Java, and React, and a <b>Software Engineer</b> at{" "}
-            <b>Handle Delivery</b> where I developed and maintained
-            administrative and back-end resources to support the company
-            {`'`}s operations.
+            AWS, Java, and React.
           </p>
         </DarkCard>
         <Skills />
