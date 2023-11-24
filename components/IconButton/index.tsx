@@ -1,6 +1,6 @@
 import React, { memo } from "react";
-import { Icon, IconProps } from "./Icon";
-import styles from "./IconButton.module.css";
+import { Icon, IconProps } from "../Icon";
+import styles from "./styles.module.css";
 
 export default memo(function IconButton({
   icon,

@@ -5,8 +5,7 @@ import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import { Roboto } from "next/font/google";
 import { memo } from "react";
-import Tooltip from "components/Tooltip";
-import Providers from "./providers";
+import Tooltip from "components/Tooltip/index";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -26,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }}
       >
         <main className="flex relative justify-center items-center w-full h-full pb-32">
-          <Providers>{children}</Providers>
+          {children}
         </main>
         <footer className="flex fixed items-end justify-center top-auto bottom-0 w-screen h-screen z-0">
           <FrostedWindow
@@ -67,7 +66,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 route="/experience/handle-delivery"
               />
               <Divider />
-              <Item src="/img/shift.png" alt="Shift" route="/projects/shift" />
               <Item
                 src="/img/foodood.png"
                 alt="FooDood"

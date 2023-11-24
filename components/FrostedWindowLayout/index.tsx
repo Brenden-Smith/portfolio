@@ -1,8 +1,7 @@
 "use client";
 import { ReactNode, memo } from "react";
 import Image from "next/image";
-import FrostedWindow from "./FrostedWindow";
-import { m } from "framer-motion";
+import FrostedWindow from "../FrostedWindow";
 
 const FrostedWindowLayout = memo(function FrostedWindowLayout({
   title,
@@ -24,17 +23,10 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
   imageColor?: string;
   tags: ReactNode[];
   className?: string;
-
   children: ReactNode | ReactNode[];
 } & React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <m.div
-      className="flex flex-col justify-center items-center z-10 h-fit w-fit"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      key={title}
-    >
+    <div className="flex flex-col justify-center items-center z-10 h-fit w-fit animate-fade-in">
       <FrostedWindow
         className="flex flex-col lg:flex-row relative"
         style={{
@@ -64,14 +56,14 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
 
           <h2>{title}</h2>
           {items.map(({ position, startDate, endDate }) => (
-            <>
+            <div key={position} className="space-y-5">
               <h4>{position}</h4>
               {startDate && endDate && (
                 <p>
                   {startDate} - {endDate}
                 </p>
               )}
-            </>
+            </div>
           ))}
           <div className="flex flex-row space-x-5">{tags}</div>
         </div>
@@ -82,7 +74,7 @@ const FrostedWindowLayout = memo(function FrostedWindowLayout({
           {children}
         </div>
       </FrostedWindow>
-    </m.div>
+    </div>
   );
 });
 
