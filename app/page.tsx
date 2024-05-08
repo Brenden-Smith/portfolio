@@ -69,7 +69,7 @@ export default function Page() {
           </p>
           <h4>Work</h4>
           <p>
-            Currently, I am a full time<b>React Developer</b> at ICF, where I am
+            Currently, I am a full time <b>React Developer</b> at ICF, where I am
             developing a modernized experience for the National Youth in
             Transition Database. Additionally, I am a <b>Software Engineer</b>{" "}
             at <b>Handle Delivery</b> where I develop and maintain back-end
