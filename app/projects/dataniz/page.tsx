@@ -1,8 +1,9 @@
 import { DarkCard } from "components/DarkCard";
-import { FrostedWindowLayout } from "components/FrostedWindowLayout";
 import { Icon } from "components/Icon";
+import PageLayout from "components/PageLayout";
 import siteMetadata from "metadata";
 import { Metadata } from "next";
+import dataniz from "public/img/dataniz.png";
 
 export const metadata: Metadata = {
   ...siteMetadata,
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <FrostedWindowLayout
+    <PageLayout
       title="Dataniz"
       items={[
         {
@@ -20,7 +21,7 @@ export default function Page() {
           endDate: "May 2023",
         },
       ]}
-      image="/img/dataniz.png"
+      image={dataniz}
       tags={[
         <Icon
           noStyle
@@ -44,7 +45,6 @@ export default function Page() {
           key="ts"
         />,
       ]}
-      className="justify-between"
     >
       <DarkCard title="Description">
         <p>Dataniz is a website that allows users to generate IoT data.</p>
@@ -57,6 +57,6 @@ export default function Page() {
           interface that complements the back end.
         </p>
       </DarkCard>
-    </FrostedWindowLayout>
+    </PageLayout>
   );
 }
