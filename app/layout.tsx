@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={roboto.className}>
       <body
-        className="flex flex-col h-screen max-h-screen p-5 gap-5 items-center"
+        className="flex flex-col h-dvh max-h-dvh p-5 gap-5 items-center"
         style={{
           backgroundImage: "url(/img/background.png)",
           backdropFilter: "blur(10px) brightness(0.5)",
