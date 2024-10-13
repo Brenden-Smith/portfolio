@@ -22,7 +22,7 @@ export default function PageLayout({
   children: ReactNode | ReactNode[];
 }) {
   return (
-    <div className="flex flex-col lg:flex-row relative animate-fade-in p-8 gap-8">
+    <div className="flex flex-col lg:flex-row relative animate-fade-in p-8 gap-8 h-fit">
       <div className="flex flex-col items-center gap-5 text-center min-w-64">
         <Image
           src={image}

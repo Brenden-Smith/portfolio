@@ -5,6 +5,14 @@ import Link from "next/link";
 import { Roboto } from "next/font/google";
 import Tooltip from "components/Tooltip/index";
 import me from "public/img/me.jpg";
+import icf from "public/img/icf.png";
+import goldman from "public/img/goldman.png";
+import handle from "public/img/handle.jpg";
+import foodood from "public/img/foodood.png";
+import dataniz from "public/img/dataniz.png";
+import thumbo from "public/img/thumbo.png";
+import video from "public/img/video.png";
+import down from "public/img/down.jpg";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -26,71 +34,56 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <main className="flex overflow-y-auto frosted-window max-w-6xl my-auto w-full">
           {children}
         </main>
-        <footer className="flex gap-4 bg-gray-300 bg-opacity-20 backdrop-blur-lg rounded-3xl drop-shadow-lg p-5 h-fit min-h-fit overflow-x-auto w-fit max-w-full">
-          <Item
-            src={me}
-            alt="About"
-            route="/"
-          />
-          <Divider />
-          <Item
-            src="/img/icf.png"
-            alt="ICF"
-            route="/experience/icf"
-            className="bg-white"
-          />
-          <Item
-            src="/img/goldman.png"
-            alt="Goldman Sachs"
-            route="/experience/goldman-sachs"
-          />
-          <Item
-            src="/img/handle.jpg"
-            alt="Handle Delivery"
-            route="/experience/handle-delivery"
-          />
-          <Divider />
-          <Item
-            src="/img/foodood.png"
-            alt="FooDood"
-            route="/projects/foodood"
-          />
-          <Item
-            src="/img/dataniz.png"
-            alt="Dataniz"
-            route="/projects/dataniz"
-          />
-          <Item
-            src="/img/thumbo.png"
-            alt="Thumbo"
-            className="bg-black"
-            route="/projects/thumbo"
-          />
-          <Item
-            src="/img/video.png"
-            alt="Video Sync"
-            route="/projects/video-sync"
-          />
-          <Item src="/img/down.jpg" alt="Down" route="/projects/down" />
-        </footer>
+        <nav className="bg-gray-300 bg-opacity-20 backdrop-blur-lg rounded-3xl drop-shadow-lg p-5 h-fit min-h-fit w-fit max-w-full overflow-x-auto">
+          <ul className="flex gap-4">
+            <Item src={me} alt="About" route="/" />
+            <Divider />
+            <Item
+              src={icf}
+              alt="ICF"
+              route="/experience/icf"
+              className="bg-white"
+            />
+            <Item
+              src={goldman}
+              alt="Goldman Sachs"
+              route="/experience/goldman-sachs"
+            />
+            <Item
+              src={handle}
+              alt="Handle Delivery"
+              route="/experience/handle-delivery"
+            />
+            <Divider />
+            <Item src={foodood} alt="FooDood" route="/projects/foodood" />
+            <Item src={dataniz} alt="Dataniz" route="/projects/dataniz" />
+            <Item
+              src={thumbo}
+              alt="Thumbo"
+              className="bg-black"
+              route="/projects/thumbo"
+            />
+            <Item src={video} alt="Video Sync" route="/projects/video-sync" />
+            <Item src={down} alt="Down" route="/projects/down" />
+          </ul>
+        </nav>
       </body>
     </html>
   );
 }
 
-function Item({ route, ...props }: { route: string } & ImageProps) {
+function Item({ route, src, alt, className }: { route: string } & ImageProps) {
   return (
-    <Tooltip title={props.alt}>
-      <Link href={route}>
-        <div className="relative rounded-3xl cursor-pointer h-24 w-24">
+    <li className="h-24 w-24">
+      <Tooltip title={alt}>
+        <Link href={route}>
           <Image
-            {...props}
-            alt={props.alt}
-            className={`object-contain rounded-3xl ${props.className}`}
-            fill
+            src={src}
+            alt={alt}
+            className={`rounded-3xl cursor-pointer object-contain h-24 w-24 ${className}`}
           />
-        </div>
-      </Link>
-    </Tooltip>
+        </Link>
+      </Tooltip>
+    </li>
   );
 }

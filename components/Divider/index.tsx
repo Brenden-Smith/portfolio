@@ -8,6 +8,6 @@ export default memo(function Divider({
   style?: React.CSSProperties;
 }) {
   return (
-    <div className={`bg-gray-400 w-0.5 ${className ?? "h-24"}`} style={style} />
+    <li className={`bg-gray-400 w-0.5 ${className ?? "h-24"}`} style={style} />
   );
 });
