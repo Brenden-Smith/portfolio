@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+const { title, image, base } = Astro.props;
+---
+
+<a
+  class="block min-h-24 min-w-24 hover:scale-105 active:scale-95 transition-transform duration-200 ease-in-out"
+  href={base ? `/${base}/${title.toLowerCase().replace(/\s+/g, "-")}` : "/"}
+  title={title}
+>
+  <Image
+    src={image}
+    alt={title}
+    class="rounded-3xl h-24 w-24 object-contain bg-black"
+    draggable="false"
+  />
+</a>

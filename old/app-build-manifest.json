@@ -1,0 +1,59 @@
+{
+  "pages": {
+    "/projects/down/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/projects/down/page.css",
+      "static/chunks/app/projects/down/page.js"
+    ],
+    "/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/loading.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/experience/goldman-sachs/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/experience/goldman-sachs/page.js"
+    ],
+    "/experience/handle-delivery/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/experience/handle-delivery/page.css",
+      "static/chunks/app/experience/handle-delivery/page.js"
+    ],
+    "/projects/dataniz/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projects/dataniz/page.js"
+    ],
+    "/projects/thumbo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/projects/thumbo/page.css",
+      "static/chunks/app/projects/thumbo/page.js"
+    ],
+    "/projects/video-sync/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/projects/video-sync/page.css",
+      "static/chunks/app/projects/video-sync/page.js"
+    ],
+    "/experience/icf/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/experience/icf/page.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
+    ]
+  }
+}

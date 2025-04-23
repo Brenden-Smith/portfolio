@@ -1,0 +1,85 @@
+---
+import FooterItem from "./FooterItem.astro";
+import brendenPicture from "../assets/brenden-smith.jpg";
+import goldmanSachsLogo from "../assets/goldman.png";
+import masterPcBuilderLogo from "../assets/master-pc-builder.jpg";
+import icfLogo from "../assets/icf.jpg";
+import handleDeliveryLogo from "../assets/handle.jpg";
+import foodoodLogo from "../assets/foodood.png";
+import datanizLogo from "../assets/dataniz.png";
+import thumboLogo from "../assets/thumbo.png";
+import videoSyncLogo from "../assets/video-sync.png";
+import downLogo from "../assets/down.jpg";
+
+const items = [
+  {
+    title: "Experience",
+    base: "experience",
+    items: [
+      {
+        title: "ICF",
+        image: icfLogo,
+      },
+      {
+        title: "Master PC Builder",
+        image: masterPcBuilderLogo,
+      },
+      {
+        title: "Handle Delivery",
+        image: handleDeliveryLogo,
+      },
+      {
+        title: "Goldman Sachs",
+        image: goldmanSachsLogo,
+      },
+    ],
+  },
+  {
+    title: "Projects",
+    base: "project",
+    items: [
+      {
+        title: "FooDood",
+        image: foodoodLogo,
+      },
+      {
+        title: "Dataniz",
+        image: datanizLogo,
+      },
+      {
+        title: "Thumbo",
+        image: thumboLogo,
+      },
+      {
+        title: "Video Sync",
+        image: videoSyncLogo,
+      },
+      {
+        title: "Down",
+        image: downLogo,
+      }
+    ],
+  },
+];
+---
+
+<nav
+  class="flex gap-5 bg-black/50 backdrop-blur-lg rounded-3xl drop-shadow-lg p-5 h-fit min-h-fit w-fit max-w-full overflow-auto"
+>
+  <FooterItem title="Brenden Smith" image={brendenPicture} />
+  {
+    items.map(({ title, items, base }) => (
+      <>
+        <h2 class="sr-only">{title}</h2>
+        <div class="h-24 min-w-[0.15rem] bg-gray-300/20" />
+        <ul class="flex flex-row gap-5">
+          {items.map((item) => (
+            <li>
+              <FooterItem {...item} base={base} />
+            </li>
+          ))}
+        </ul>
+      </>
+    ))
+  }
+</nav>
