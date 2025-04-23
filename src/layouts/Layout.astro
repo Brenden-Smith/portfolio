@@ -1,0 +1,133 @@
+---
+import { Image } from "astro:assets";
+import "../styles/global.css";
+import backgroundImage from "../assets/background.jpg";
+import "@fontsource-variable/roboto";
+import clsx from "clsx";
+import Footer from "../components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
+
+const {
+  company,
+  positions,
+  image: imagePath,
+  more,
+}: {
+  company: string;
+  image: string;
+  positions?: {
+    title: string;
+    startDate?: string;
+    endDate?: string;
+  }[];
+  more: {
+    title: string;
+    href: string;
+  }[];
+} = Astro.props.frontmatter;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+  );
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Brenden Smith's portfolio" />
+    <meta name="author" content="Brenden Smith" />
+    <title>{company} | Brenden Smith</title>
+    <ClientRouter />
+  </head>
+  <body class="flex flex-col h-dvh max-h-dvh p-5 gap-5 items-center">
+    <Image
+      src={backgroundImage}
+      alt="Background"
+      class="fixed inset-0 object-cover w-full h-full -z-10 blur-sm opacity-75"
+      draggable="false"
+      loading="lazy"
+      decoding="async"
+    />
+    <main
+      class="flex flex-col lg:flex-row relative fade-in p-8 gap-8 h-fit overflow-y-auto bg-black/50 backdrop-blur-lg rounded-3xl drop-shadow-lg max-w-6xl my-auto w-full"
+    >
+      <div class="flex flex-col items-center gap-3 text-center min-w-64">
+        <Image
+          src={images[imagePath]()}
+          alt={company}
+          class="rounded-3xl h-64 w-64 object-contain mb-3 bg-black"
+          draggable="false"
+        />
+        <h1 class="text-3xl font-bold">{company}</h1>
+        <h2 class="sr-only">Positions</h2>
+        {
+          positions?.map(({ title, startDate, endDate }) => (
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl font-medium">{title}</h3>
+              {startDate && endDate && (
+                <span class="font-light">
+                  {startDate} - {endDate}
+                </span>
+              )}
+            </div>
+          ))
+        }
+        <!-- <div class="flex flex-row gap-5">{tags}</div> -->
+      </div>
+      <div class="flex flex-col gap-5">
+        {
+          [
+            {
+              heading: company !== "Brenden Smith" && "Description",
+            },
+            more && {
+              heading: "More",
+              content: more,
+            },
+          ]
+            .filter(Boolean)
+            .map(({ heading, content }) => (
+              <div
+                class={clsx(
+                  "p-5 space-y-5 bg-gray-600/20 backdrop-blur-lg rounded-3xl drop-shadow-lg",
+                  !content && "md"
+                )}
+              >
+                {heading && (
+                  <h2 class="text-2xl font-semibold text-center">{heading}</h2>
+                )}
+                {content ? (
+                  <ul class="flex gap-3">
+                    {content.map(({ title, href }) => (
+                      <li>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-blue-500 hover:underline bg-blue-500 rounded-lg px-4 py-2 hover:bg-blue-600 active:bg-blue-700 transition duration-200"
+                        >
+                          {title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <slot />
+                )}
+              </div>
+            ))
+        }
+      </div>
+    </main>
+    <footer class="flex justify-center px-5 w-screen">
+      <Footer />
+    </footer>
+  </body>
+</html>
