@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.4",
     "clsx": "^2.1.1",
+    "devicon": "^2.16.0",
     "tailwindcss": "^4.1.4"
   }
 }
