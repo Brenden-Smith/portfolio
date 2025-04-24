@@ -57,13 +57,16 @@ a {
     height: 1px;
     overflow: hidden;
   }
-  
+  .link-animation {
+    @apply hover:scale-105 active:scale-95 transition-transform duration-200 ease-in-out;
+  }
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -74,7 +77,7 @@ a {
 }
 
 .md p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .md h4 {

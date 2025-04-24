@@ -6,6 +6,15 @@ positions:
   - title: Software Engineer
     startDate: February 2022
     endDate: April 2024
+tags:
+  - title: React / React Native
+    icon: devicon-react-original colored
+  - title: Next.js
+    icon: devicon-nextjs-plain
+  - title: Google Cloud
+    icon: devicon-googlecloud-plain colored
+  - title: Firebase
+    icon: devicon-firebase-plain colored
 ---
 Handle Delivery was a startup based out of the University of Southern California that provided snack delivery services to students on college campuses across the country. I worked as a software engineer on the team, and I was responsible for developing the company's back-end infrastructure on Google Cloud and administrative/operations tools.
 

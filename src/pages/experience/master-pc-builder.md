@@ -9,6 +9,13 @@ positions:
 more:
   - title: Website
     href: https://www.masterpcbuilds.com
+tags:
+  - title: Next.js
+    icon: devicon-nextjs-plain
+  - title: React
+    icon: devicon-react-original colored
+  - title: AWS
+    icon: devicon-amazonwebservices-plain-wordmark colored
 ---
 
 - Created and maintained headless Shopify website using Next.js, tailored for marketing and selling company products.

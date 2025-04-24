@@ -6,6 +6,11 @@ positions:
   - title: Software Engineer
     startDate: January 2023
     endDate: May 2023
+tags:
+  - title: Next.js
+    icon: devicon-nextjs-plain
+  - title: React
+    icon: devicon-react-original colored
 ---
 Dataniz is a website that allows users to generate IoT data.
 

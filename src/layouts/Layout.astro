@@ -6,25 +6,17 @@ import "@fontsource-variable/roboto";
 import clsx from "clsx";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
+import type { FrontmatterProps } from "../types/FrontmatterProps";
+import "devicon/devicon.min.css";
+import Tooltip from "../components/Tooltip.astro";
 
 const {
   company,
   positions,
   image: imagePath,
   more,
-}: {
-  company: string;
-  image: string;
-  positions?: {
-    title: string;
-    startDate?: string;
-    endDate?: string;
-  }[];
-  more: {
-    title: string;
-    href: string;
-  }[];
-} = Astro.props.frontmatter;
+  tags,
+}: FrontmatterProps = Astro.props.frontmatter;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}"
@@ -33,6 +25,9 @@ if (!images[imagePath])
   throw new Error(
     `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
   );
+
+const pageTitle =
+  company !== "Brenden Smith" ? `${company} | Brenden Smith` : "Brenden Smith";
 ---
 
 <html lang="en">
@@ -43,7 +38,7 @@ if (!images[imagePath])
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="Brenden Smith's portfolio" />
     <meta name="author" content="Brenden Smith" />
-    <title>{company} | Brenden Smith</title>
+    <title>{pageTitle}</title>
     <ClientRouter />
   </head>
   <body class="flex flex-col h-dvh max-h-dvh p-5 gap-5 items-center">
@@ -66,7 +61,7 @@ if (!images[imagePath])
           draggable="false"
         />
         <h1 class="text-3xl font-bold">{company}</h1>
-        <h2 class="sr-only">Positions</h2>
+        {positions && <h2 class="sr-only">Positions</h2>}
         {
           positions?.map(({ title, startDate, endDate }) => (
             <div class="flex flex-col gap-1">
@@ -79,7 +74,17 @@ if (!images[imagePath])
             </div>
           ))
         }
-        <!-- <div class="flex flex-row gap-5">{tags}</div> -->
+        {
+          tags && (
+            <ul class="flex flex-row gap-5">
+              {tags.map(({icon, ...tag}) => (
+                <Tooltip {...tag}>
+                  <i class={clsx(icon, "inline-block text-3xl", tag.href && "link-animation")} />
+                </Tooltip>
+              ))}
+            </ul>
+          )
+        }
       </div>
       <div class="flex flex-col gap-5">
         {

@@ -6,6 +6,15 @@ positions:
   - title: Software Engineer
     startDate: July 2023
     endDate: October 2023
+tags:
+  - title: Java
+    icon: devicon-java-plain colored
+  - title: Spring
+    icon: devicon-spring-plain colored
+  - title: React
+    icon: devicon-react-original colored
+  - title: AWS
+    icon: devicon-amazonwebservices-plain-wordmark colored
 ---
 
 #### Analyst Software Engineer
