@@ -8,6 +8,7 @@ const { title, image, base } = Astro.props;
     title={title}
     href={base ? `/${base}/${title.toLowerCase().replace(/\s+/g, "-")}` : "/"}
     className="block min-h-24 min-w-24 link-animation"
+    internal={true}
 >
     <Image
         src={image}

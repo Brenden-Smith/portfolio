@@ -1,5 +1,5 @@
 ---
-const { title, href, className } = Astro.props;
+const { title, href, className, internal = false } = Astro.props;
 import clsx from "clsx";
 ---
 
@@ -8,7 +8,7 @@ import clsx from "clsx";
         href ? (
             <a
                 href={href}
-                target="_blank"
+                target={!internal && "_blank"}
                 rel="noopener noreferrer"
                 class={clsx("tooltip", className)}
             >
