@@ -1,17 +1,18 @@
 ---
 import { Image } from "astro:assets";
+import Tooltip from "./Tooltip.astro";
 const { title, image, base } = Astro.props;
 ---
 
-<a
-  class="block min-h-24 min-w-24 link-animation"
-  href={base ? `/${base}/${title.toLowerCase().replace(/\s+/g, "-")}` : "/"}
-  title={title}
+<Tooltip
+    title={title}
+    href={base ? `/${base}/${title.toLowerCase().replace(/\s+/g, "-")}` : "/"}
+    className="block min-h-24 min-w-24 link-animation"
 >
-  <Image
-    src={image}
-    alt={title}
-    class="rounded-3xl h-24 w-24 object-contain bg-black"
-    draggable="false"
-  />
-</a>
+    <Image
+        src={image}
+        alt={title}
+        class="rounded-3xl h-24 w-24 object-contain bg-black"
+        draggable="false"
+    />
+</Tooltip>
