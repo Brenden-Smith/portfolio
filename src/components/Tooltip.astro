@@ -9,7 +9,7 @@ import clsx from "clsx";
             <a
                 href={href}
                 target={!internal ? "_blank" : undefined}
-                rel={!internal ? "noopener noreferrer" : undefined}
+                rel={!internal ? "noopener noreferrer" : "preload"}
                 class={clsx("tooltip", className)}
             >
                 <slot />
