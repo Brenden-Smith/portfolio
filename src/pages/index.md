@@ -20,8 +20,10 @@ Hello there! My name is Brenden Smith and I am a software engineer based in the 
 
 #### Certifications
 
+- **Amazon Web Services (AWS) Cloud Practitioner** - December 2025
 - **Snowflake SnowPro Core Certification** - December 2024
+
 #### Work
-Currently, I am a full time **Software Engineer II** at ICF, where I am developing a modernized experience for the National Youth in Transition Database. Additionally, I am a **Senior Software Engineer** at **Master PC Builder**, where I develop the company's website and tools to manage the company's operations, while overseeing the company's scrum operations.
+Currently, I am a full time **Software Engineer II — Lead** at ICF, where I am developing a modernized experience for the National Youth in Transition Database.
 
 Formerly, I was a **Software Engineer** at **Goldman Sachs**, where I developed enterprise-grade financial tools using scalable Java-based microservices hosted on AWS, complemented by intuitive front ends crafted with React. I also worked as a **Software Engineer** at **Handle Delivery**, where I developed the company's back-end infrastructure on Google Cloud and administrative/operations tools.

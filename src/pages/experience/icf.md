@@ -3,7 +3,7 @@ layout: ../../layouts/Layout.astro
 company: ICF
 image: /src/assets/icf.jpg
 positions:
-  - title: Software Engineer II
+  - title: Software Engineer II - Lead
     startDate: October 2023
     endDate: Present
 tags:
@@ -15,6 +15,7 @@ tags:
     icon: devicon-amazonwebservices-plain-wordmark colored
 ---
 
+- Lead front end software engineer (as of March 2026) on the National Youth in Transition Database modernization initiative project
 - Collaborated with the team to create a modern experience for the
   National Youth in Transition Database by developing front-end
   solutions with Next.js, ensuring compliance with Section 508
