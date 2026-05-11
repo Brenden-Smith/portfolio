@@ -19,6 +19,6 @@ tags:
 ---
 
 - Created and maintained headless Shopify website using Next.js, tailored for marketing and selling company products.
-- Creating CLI tools to automate inventory processes
-- Managing cloud resources through Amazon Web Services (AWS)
-- Lead scrum operations, overseeing end-to-end Agile workflows, refining backlog priorities, and optimizing sprint cycles to enhance team productivity and cross-functional collaboration
+- Created CLI tools to automate inventory processes
+- Managed cloud resources through Amazon Web Services (AWS)
+- Led scrum operations, overseeing end-to-end Agile workflows, refining backlog priorities, and optimizing sprint cycles to enhance team productivity and cross-functional collaboration
